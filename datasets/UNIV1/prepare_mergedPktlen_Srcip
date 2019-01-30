@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# As for why the "vlan and then actual filter" is needed see:
+# https://serverfault.com/questions/824722/tcpdump-filter-does-not-work-why?noredirect=1&lq=1
+
+for l in *.pcap; do
+	tcpdump 'vlan and ip and ((tcp) or (udp))' -v -q -n -r $l |
+	awk 'NR%2{printf "%s ",$0;next;}1' |
+	awk '{print $17"."$18}' |
+	sed 's/,//g' |
+	sed 's/)//g' |
+	awk -F "." '{print $1" "($2*16777216)+($3*65536)+($4*256)+($5)}';
+done >> mergedPktlen_Srcip

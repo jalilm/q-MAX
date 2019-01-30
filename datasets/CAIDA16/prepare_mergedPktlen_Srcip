@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for l in *.pcap; do
+	tcpdump 'ip and ((tcp) or (udp))' -v -q -n -r $l |
+	awk 'NR%2{printf "%s ",$0;next;}1' |
+	awk '{print $17"."$18}' |
+	sed 's/,//g' |
+	sed 's/)//g' |
+	awk -F "." '{print $1" "($2*16777216)+($3*65536)+($4*256)+($5)}';
+done >> mergedPktlen_Srcip
