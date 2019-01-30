@@ -38,7 +38,7 @@ void benchmark_psskiplist(int q, key** data, val** data2, ofstream &ostream, str
   for (int i = 0; i < numKeys; i++) {
     key k = elements[i];
     unsigned long long priority = weights[i] / _dist(_e2);
-    sl.add(pair<key, val>(k, priority));
+    sl.add(pair<key, val>(priority, k));
   }
   endt = clock();
   ftime(&endtb);
@@ -61,7 +61,7 @@ void benchmark_psheap(int q, key** data, val** data2, ofstream &ostream, string 
   for (int i = 0; i < numKeys; i++) {
     key k = elements[i];
     unsigned long long priority = weights[i] / _dist(_e2);
-    heap.add(pair<key,val>(k, priority));
+    heap.add(pair<key,val>(priority, k));
   }
   endt = clock();
   ftime(&endtb);
@@ -84,7 +84,7 @@ void benchmark_psqmax(int q, double gamma, key** data, val** data2, ofstream &os
   for (int i = 0; i < numKeys; i++) {
     key k = elements[i];
     unsigned long long priority = weights[i] / _dist(_e2);
-    qmax.insert(k, priority);
+    qmax.insert(priority, k);
   }
   endt = clock();
   ftime(&endtb);

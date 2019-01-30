@@ -28,7 +28,7 @@ for s in [10000, 100000, 1000000, 10000000]:
     del size_df['size']
     qmax_size_df = size_df[(size_df['type'] == 'AmortizedQMax')]
     g = qmax_size_df.groupby(['gamma'])
-    ax1.plot(g.mean(), label=r'q-MAX, $q=10^{' + str(int(ceil(log(s,10)))) + r'}$', markersize=10)
+    ax1.plot(g.mean(), label=r'q-MAX-KV, $q=10^{' + str(int(ceil(log(s,10)))) + r'}$', markersize=10)
 
 handles, labels = ax1.get_legend_handles_labels()
 ax1.legend(prop={'size': 16}, loc='upper left', bbox_to_anchor=(0,1), ncol=1)

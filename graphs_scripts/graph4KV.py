@@ -27,7 +27,7 @@ for l in [0.01, 0.05, 0.1]:
     ga = trace_a.groupby(['size'])
     print ("gamma" + str(l))
     print(ga.mean())
-    ax1.plot(ga.mean(), label=r'$q$-MAX,$\gamma=$' + str(l), markersize=10)
+    ax1.plot(ga.mean(), label=r'$q$-MAX-KV,$\gamma=$' + str(l), markersize=10)
 
 handles, labels = ax1.get_legend_handles_labels()
 ax1.legend(handles, labels, loc=1, prop={'size': 16})

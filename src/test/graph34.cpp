@@ -79,11 +79,11 @@ int main() {
       data[i] = std::rand();
       vals[i] = std::rand();
     }
-    list<int> qs = {100, 1000};
+    list<int> qs = {10000, 100000, 1000000, 10000000};
     for (int q : qs) {
-      //benchmark_heap(q, &data, ostream);
-      //benchmark_skiplist(q, &data, ostream);
-      list<double> gammas = {0.05, 0.01};
+      benchmark_heap(q, &data, ostream);
+      benchmark_skiplist(q, &data, ostream);
+      list<double> gammas = {2, 1, 0.5, 0.25, 0.1, 0.05, 0.01, 0.005, 0.001};
       for (double g : gammas) {
         benchmark_qmax(q, g, &data, ostream);
       }
