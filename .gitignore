@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# pcap trace files
+*.pcap
