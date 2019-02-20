@@ -9,7 +9,7 @@ multichrome = cycler(color=['r','c','m','y','k','burlywood']) + cycler(marker=['
 fig, ax1 = plt.subplots(1,1)
 ax1.set_prop_cycle(multichrome)
 ax1.grid()
-ax1.set_ylabel('Throughput [MPPS]', fontsize=20)
+ax1.set_ylabel('CPU Throughput [MPPS]', fontsize=20)
 ax1.set_xlabel(r'Slack parameter ($\tau$)', fontsize=20)
 
 df_org = pd.read_csv('../results/stiming_random.raw_res', skipinitialspace=True)
@@ -38,4 +38,4 @@ ax1.legend(handles, labels, prop={'size': 16}, loc='lower center', framealpha=1.
 fig.tight_layout()
 plt.tick_params(axis='both', which='major', labelsize=16)
 plt.show()
-
+#plt.savefig('graph8.png', bbox_inches='tight')

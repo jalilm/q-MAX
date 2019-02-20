@@ -6,7 +6,7 @@
 #include <utility>
 
 typedef unsigned long long key;
-typedef unsigned long long val;
+typedef double val;
 
 using std::vector;
 using std::pair;
@@ -23,7 +23,10 @@ class HeapKV {
   ~HeapKV() = default;
 
   bool add(pair<key, val> item);
-
+  bool insert(key k, val v) {return add(pair<key,val>(k,v));};
+  key getMinimalKey() { return minimal_item.first;};
+  val getMinimalVal() { return minimal_item.second;};
+  void update(key k, val v);
   vector<pair<key, val>> getItems() const;
 };
 

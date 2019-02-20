@@ -21,8 +21,8 @@
 #define UNIV1_SIZE 17323447
 using namespace std;
 
-void benchmark_hhskiplist(int q, key** data, ofstream &ostream, string dataset, int numKeys) {
-  key *elements = *data;
+void benchmark_hhskiplist(int q, key** keys, ofstream &ostream, string dataset, int numKeys) {
+  key *elements = *keys;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -30,9 +30,8 @@ void benchmark_hhskiplist(int q, key** data, ofstream &ostream, string dataset, 
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    val hash = XXH64((void *) &k, sizeof(key), 1235);
-    sl.add(pair<key, val>(k, hash));
+    val hash = XXH64((void *) &(elements[i]), sizeof(key), 1235);
+    sl.add(pair<key, val>(elements[i], hash));
   }
   endt = clock();
   ftime(&endtb);
@@ -40,8 +39,8 @@ void benchmark_hhskiplist(int q, key** data, ofstream &ostream, string dataset, 
   ostream << dataset << ",SkipList," << numKeys << "," << q << ",," << time << endl;
 }
 
-void benchmark_hhheap(int q, key** data, ofstream &ostream, string dataset, int numKeys) {
-  key *elements = *data;
+void benchmark_hhheap(int q, key** keys, ofstream &ostream, string dataset, int numKeys) {
+  key *elements = *keys;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -49,9 +48,8 @@ void benchmark_hhheap(int q, key** data, ofstream &ostream, string dataset, int 
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    val hash = XXH64((void *) &k, sizeof(key), 1235);
-    heap.add(pair<key,val>(k, hash));
+    val hash = XXH64((void *) &(elements[i]), sizeof(key), 1235);
+    heap.add(pair<key,val>(elements[i], hash));
   }
   endt = clock();
   ftime(&endtb);
@@ -59,8 +57,8 @@ void benchmark_hhheap(int q, key** data, ofstream &ostream, string dataset, int 
   ostream << dataset << ",Heap," << numKeys << "," << q << ",," << time << endl;
 }
 
-void benchmark_hhqmax(int q, double gamma, key** data, ofstream &ostream, string dataset, int numKeys) {
-  key *elements = *data;
+void benchmark_hhqmax(int q, double gamma, key** keys, ofstream &ostream, string dataset, int numKeys) {
+  key *elements = *keys;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -68,9 +66,8 @@ void benchmark_hhqmax(int q, double gamma, key** data, ofstream &ostream, string
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    val hash = XXH64((void *) &k, sizeof(key), 1235);
-    qmax.insert(k, hash);
+    val hash = XXH64((void *) &(elements[i]), sizeof(key), 1235);
+    qmax.insert(elements[i], hash);
   }
   endt = clock();
   ftime(&endtb);
@@ -130,8 +127,8 @@ int main() {
   sizes.push_back(CAIDA18_SIZE);
   datasets.push_back("caida18");
 
-  list<unsigned int> chis = {10000000, 1000000, 100000, 10000};
-  for (int run = 0; run < 5; run++) {
+  list<unsigned int> chis = {10000000};
+  for (int run = 0; run < 1; run++) {
   for (unsigned int chi : chis ) {
     vector<key*>::iterator k_it = keys.begin();
     vector<int>::iterator s_it = sizes.begin();
@@ -140,9 +137,9 @@ int main() {
       key* k = *k_it;
       int size = *s_it;
       string dataset = *d_it;
-      benchmark_hhheap(chi, &k, *stream, dataset, size);
-      benchmark_hhskiplist(chi, &k, *stream, dataset, size);
-      list<double> gammas = {0.5, 0.25, 0.1, 0.05, 0.01, 0.005};
+      //benchmark_hhheap(chi, &k, *stream, dataset, size);
+      //benchmark_hhskiplist(chi, &k, *stream, dataset, size);
+      list<double> gammas = {0.5};//{0.5, 0.25, 0.1, 0.05};
       for (double g : gammas) {
         benchmark_hhqmax(chi, g, &k, *stream, dataset, size);
       }
@@ -157,3 +154,4 @@ int main() {
   caida18stream.close();
   return 0;
 }
+

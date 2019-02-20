@@ -23,12 +23,12 @@
 
 using namespace std;
 
-void benchmark_psskiplist(int q, key** data, val** data2, ofstream &ostream, string dataset, int numKeys) {
+void benchmark_psskiplist(int q, key** keys, val** vals, ofstream &ostream, string dataset, int numKeys) {
   std::random_device _rd;
   std::mt19937 _e2(_rd());
   std::uniform_real_distribution<double> _dist(0,1);
-  key *elements = *data;
-  val *weights = *data2;
+  key *elements = *keys;
+  val *weights = *vals;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -36,9 +36,8 @@ void benchmark_psskiplist(int q, key** data, val** data2, ofstream &ostream, str
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    unsigned long long priority = weights[i] / _dist(_e2);
-    sl.add(pair<key, val>(priority, k));
+    val priority = weights[i] / (1-_dist(_e2));
+    sl.add(pair<key, val>(elements[i], priority));
   }
   endt = clock();
   ftime(&endtb);
@@ -46,12 +45,12 @@ void benchmark_psskiplist(int q, key** data, val** data2, ofstream &ostream, str
   ostream << dataset << ",SkipList," << numKeys << "," << q << ",," << time << endl;
 }
 
-void benchmark_psheap(int q, key** data, val** data2, ofstream &ostream, string dataset, int numKeys) {
+void benchmark_psheap(int q, key** keys, val** vals, ofstream &ostream, string dataset, int numKeys) {
   std::random_device _rd;
   std::mt19937 _e2(_rd());
   std::uniform_real_distribution<double> _dist(0,1);
-  key *elements = *data;
-  val *weights = *data2;
+  key *elements = *keys;
+  val *weights = *vals;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -59,9 +58,8 @@ void benchmark_psheap(int q, key** data, val** data2, ofstream &ostream, string 
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    unsigned long long priority = weights[i] / _dist(_e2);
-    heap.add(pair<key,val>(priority, k));
+    val priority = weights[i] / (1-_dist(_e2));
+    heap.add(pair<key,val>(elements[i], priority));
   }
   endt = clock();
   ftime(&endtb);
@@ -69,12 +67,12 @@ void benchmark_psheap(int q, key** data, val** data2, ofstream &ostream, string 
   ostream << dataset << ",Heap," << numKeys << "," << q << ",," << time << endl;
 }
 
-void benchmark_psqmax(int q, double gamma, key** data, val** data2, ofstream &ostream, string dataset, int numKeys) {
+void benchmark_psqmax(int q, double gamma, key** keys, val** vals, ofstream &ostream, string dataset, int numKeys) {
   std::random_device _rd;
   std::mt19937 _e2(_rd());
   std::uniform_real_distribution<double> _dist(0,1);
-  key *elements = *data;
-  val *weights = *data2;
+  key *elements = *keys;
+  val *weights = *vals;
   struct timeb begintb, endtb;
   clock_t begint, endt;
   double time;
@@ -82,9 +80,8 @@ void benchmark_psqmax(int q, double gamma, key** data, val** data2, ofstream &os
   begint = clock();
   ftime(&begintb);
   for (int i = 0; i < numKeys; i++) {
-    key k = elements[i];
-    unsigned long long priority = weights[i] / _dist(_e2);
-    qmax.insert(priority, k);
+    val priority = weights[i] / (1-_dist(_e2));
+    qmax.insert(elements[i], priority);
   }
   endt = clock();
   ftime(&endtb);
@@ -92,35 +89,36 @@ void benchmark_psqmax(int q, double gamma, key** data, val** data2, ofstream &os
   ostream << dataset << ",AmortizedQMax," << numKeys << "," << q << "," << gamma << "," << time << endl;
 }
 
-void getKeysFromFile(string filename, vector<key*> &keys, vector<val*> &vals, int size) {
+void getKeysAndValsFromFile(string filename, vector<key*> &keys, vector<val*> &vals, int size) {
   ifstream stream;
   stream.open(filename, fstream::in | fstream::out | fstream::app);
   if (!stream) {
     throw invalid_argument("Could not open " + filename + " for reading.");
   }
 
-  key* data2 = (key*) malloc(sizeof(key) * size);
-  val* data1 = (val*) malloc(sizeof(val) * size);
+  key* file_keys = (key*) malloc(sizeof(key) * size);
+  val* file_vals = (val*) malloc(sizeof(val) * size);
+
   string line;
-  string cell1;
-  string cell2;
+  string len;
+  string id;
   for (int i = 0; i < size; ++i){
     getline(stream, line);
     std::istringstream iss(line);
-    iss >> cell1;
-    iss >> cell2;
+    iss >> len;
+    iss >> id;
     try {
-      data1[i] = stoull(cell1);
-      data2[i] = stoull(cell2);
+      file_keys[i] = stoull(id);
+      file_vals[i] = stoull(len);
     } catch (const std::invalid_argument& ia) {
       cerr << "Invalid argument: " << ia.what() << " at line " << i << endl;
-      cerr << cell1 << " " << cell2 << endl;;
+      cerr << len << " " << id << endl;;
       --i;
       exit(1);
     }
   }
-  keys.push_back(data2);
-  vals.push_back(data1);
+  keys.push_back(file_keys);
+  vals.push_back(file_vals);
 
   stream.close();
 }
@@ -133,28 +131,28 @@ int main() {
   vector<string> datasets;
 
   ofstream univ1stream;
-  setupOutputFile("../results/ps_univ1kv.raw_res", univ1stream, false);
+  setupOutputFile("../results/ps_univ1.raw_res", univ1stream, false);
   streams.push_back(&univ1stream);
-  getKeysFromFile("../datasets/UNIV1/mergedPktlen_Srcip", keys, vals, UNIV1_SIZE);
+  getKeysAndValsFromFile("../datasets/UNIV1/mergedPktlen_Srcip", keys, vals, UNIV1_SIZE);
   sizes.push_back(UNIV1_SIZE);
   datasets.push_back("univ1");
 
   ofstream caida16stream;
-  setupOutputFile("../results/ps_caidakv.raw_res", caida16stream, false);
+  setupOutputFile("../results/ps_caida.raw_res", caida16stream, false);
   streams.push_back(&caida16stream);
-  getKeysFromFile("../datasets/CAIDA16/mergedPktlen_Srcip", keys, vals, CAIDA16_SIZE);
+  getKeysAndValsFromFile("../datasets/CAIDA16/mergedPktlen_Srcip", keys, vals, CAIDA16_SIZE);
   sizes.push_back(CAIDA16_SIZE);
   datasets.push_back("caida");
 
   ofstream caida18stream;
-  setupOutputFile("../results/ps_caida18kv.raw_res", caida18stream, false);
+  setupOutputFile("../results/ps_caida18.raw_res", caida18stream, false);
   streams.push_back(&caida18stream);
-  getKeysFromFile("../datasets/CAIDA18/mergedPktlen_Srcip", keys, vals, CAIDA18_SIZE);
+  getKeysAndValsFromFile("../datasets/CAIDA18/mergedPktlen_Srcip", keys, vals, CAIDA18_SIZE);
   sizes.push_back(CAIDA18_SIZE);
   datasets.push_back("caida18");
 
   list<unsigned int> qs = {10000000, 1000000, 100000, 10000};
-  for (int run = 0; run < 1; run++) {
+  for (int run = 0; run < 5; run++) {
   for (unsigned q: qs) {
     vector<key*>::iterator k_it = keys.begin();
     vector<val*>::iterator v_it = vals.begin();
@@ -165,9 +163,9 @@ int main() {
       val* v = *v_it;
       int size = *s_it;
       string dataset = *d_it;
-//      benchmark_psheap(q, &k, &v, *stream, dataset, size);
-  //    benchmark_psskiplist(q, &k, &v, *stream, dataset, size);
-      list<double> gammas = {0.5, 0.25, 0.1, 0.05, 0.01, 0.005};
+      benchmark_psheap(q, &k, &v, *stream, dataset, size);
+      benchmark_psskiplist(q, &k, &v, *stream, dataset, size);
+      list<double> gammas = {0.5, 0.25, 0.1, 0.05};
       for (double g : gammas) {
         benchmark_psqmax(q, g, &k, &v, *stream, dataset, size);
       }

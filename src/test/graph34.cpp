@@ -74,16 +74,14 @@ int main() {
   setupOutputFile("../results/timing_random.raw_res", ostream, false);
   for (int run = 0; run < 5; run++) {
     int* data = (int*) malloc(sizeof(int) * N);
-    int* vals = (int*) malloc(sizeof(int) * N);
     for (int i = 0; i< N; ++i){
       data[i] = std::rand();
-      vals[i] = std::rand();
     }
     list<int> qs = {10000, 100000, 1000000, 10000000};
     for (int q : qs) {
       benchmark_heap(q, &data, ostream);
       benchmark_skiplist(q, &data, ostream);
-      list<double> gammas = {2, 1, 0.5, 0.25, 0.1, 0.05, 0.01, 0.005, 0.001};
+      list<double> gammas = {0.025};
       for (double g : gammas) {
         benchmark_qmax(q, g, &data, ostream);
       }
@@ -92,3 +90,4 @@ int main() {
   ostream.close();
   return 0;
 }
+

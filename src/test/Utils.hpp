@@ -4,10 +4,11 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+#include <stdexcept>
 
 using namespace std;
 
-void setupOutputFile(string result_file, ofstream& result_stream, bool sliding) {
+void setupOutputFile(string result_file, ofstream& result_stream, bool sliding, bool ed=false) {
   bool addCSVHeader = false;
   ifstream check_result_stream;
   check_result_stream.open(result_file, fstream::in | fstream::out | fstream::app);
@@ -27,7 +28,11 @@ void setupOutputFile(string result_file, ofstream& result_stream, bool sliding) 
     if (sliding) {
       result_stream << "dataset,type,insertions,size,gamma,W,tau,duration" << endl;
     } else {
-      result_stream << "dataset,type,insertions,size,gamma,duration" << endl;
+	if(ed) {
+		result_stream << "dataset,type,insertions,size,gamma,c,duration" << endl;
+	} else {
+      		result_stream << "dataset,type,insertions,size,gamma,duration" << endl;
+	}
     }
   }
 }

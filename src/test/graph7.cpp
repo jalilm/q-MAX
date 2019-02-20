@@ -39,6 +39,46 @@ void benchmark_qmax_steps(int q, double gamma, int** data, ofstream& ostream) {
   }
 }
 
+void benchmark_heap_steps(int q, int** data, ofstream& ostream) {
+  int* elements = *data;
+  struct timeb begintb, endtb;
+  clock_t begint, endt;
+  double time = 0;
+  Heap heap = Heap(q);
+  for (int i = 0; i < N;) {
+    begint = clock();
+    ftime(&begintb);
+    for (int j = 0; j < STEP; j++, i++) {
+      heap.add(elements[i]);
+    }
+    endt = clock();
+    ftime(&endtb);
+    time += ((double)(endt-begint))/CLK_PER_SEC;
+    ostream << "random,Heap," << i << "," << q << ",," << time << endl;
+  }
+}
+
+void benchmark_skiplist_steps(int q, int** data, ofstream& ostream) {
+  int* elements = *data;
+  struct timeb begintb, endtb;
+  clock_t begint, endt;
+  double time = 0;
+  Skiplist sl = Skiplist(q);
+  for (int i = 0; i < N;) {
+    begint = clock();
+    ftime(&begintb);
+    for (int j = 0; j < STEP; j++, i++) {
+      sl.add(elements[i]);
+    }
+    endt = clock();
+    ftime(&endtb);
+    time += ((double)(endt-begint))/CLK_PER_SEC;
+    ostream << "random,SkipList," << i << "," << q << ",," << time << endl;
+  }
+}
+
+
+
 void benchmark_sqmax_steps(int q, double gamma, int n, int W, int** data, ofstream& ostream) {
   int* elements = *data;
   struct timeb begintb, endtb;
@@ -59,11 +99,19 @@ void benchmark_sqmax_steps(int q, double gamma, int n, int W, int** data, ofstre
 }
 
 int main() {
-  ofstream sliding_stream;
+/*  ofstream sliding_stream;
   setupOutputFile("../results/stiming_steps_random.raw_res", sliding_stream, true);
 
   ofstream qmax_stream;
   setupOutputFile("../results/timing_steps_random.raw_res", qmax_stream, false);
+*/
+
+  ofstream heap_stream;
+  setupOutputFile("../results/timing_heap_steps_random.raw_res", heap_stream, false);
+
+  ofstream skiplist_stream;
+  setupOutputFile("../results/timing_skiplist_steps_random.raw_res", skiplist_stream, false);
+
 
   for (int run = 0; run < 5; run++) {
     int* data = (int*) malloc(sizeof(int) * N);
@@ -72,11 +120,16 @@ int main() {
       data[i] = std::rand();
       vals[i] = std::rand();
     }
+/*
     list<double> gammas = {0.1, 0.05, 0.01, 0.005, 0.001, 0.005};
+*/
     list<unsigned int> qs = {100000, 1000000};
+/*  
     list<unsigned int> ns = {1};
     list<unsigned int> Ws = {10000000};
+*/
     for (unsigned int q : qs) {
+/*
       for (double g : gammas) {
         for (unsigned int n : ns) {
           for (unsigned int W : Ws) {
@@ -84,10 +137,17 @@ int main() {
           }
         }
         benchmark_qmax_steps(q, g, &data, qmax_stream);
+*/
+	benchmark_heap_steps(q, &data, heap_stream);
+	benchmark_skiplist_steps(q, &data, skiplist_stream);
       }
     }
+/*
   }
   sliding_stream.close();
   qmax_stream.close();
+*/
+  heap_stream.close();
+  skiplist_stream.close();
   return 0;
 }

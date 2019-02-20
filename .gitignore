@@ -35,8 +35,7 @@
 *.pcap
 
 # merged ./datasets/ files
-datasets/*/mergedIPID_Srcip
-datasets/*/mergedPktlen_Srcip
+datasets/*/merged*
 
 # executable files
 src/graph*

@@ -20,14 +20,18 @@ bool SkiplistKV::add(pair<key,val> item) {
   bool added = false;
   if (_size >= max_size) {
     auto min_item = getMinimalItem();
-    if (item <= min_item) {
+    if (item.second <= min_item.second) { // DIRECT COMPARSION: check if new val is smaller than minimal
       return false;
     } else {
+/*    
       bool added = _insert(item);
       if (added) {
         _remove(min_item);
       }
       return added;
+*/
+      _insert(item);
+      _remove(min_item);
     }
   } else {
     return _insert(item);
@@ -41,14 +45,15 @@ bool SkiplistKV::_insert(pair<key,val> item) {
 
   for (int i = level - 1; i >= 0; --i) {
     q = p->next[i];
-    while ((q != nullptr) && (q->item < item)) {
+    while ((q != nullptr) && (q->item.second < item.second)) { // DIRECT COMPARSION: we are looking for the item per its value.
       p = q;
       q = p->next[i];
     }
     update[i] = p;
   }
 
-  if ((q != nullptr) && (q->item == item)) {
+  if ((q != nullptr) && (q->item.first == item.first) && (q->item.second == item.second)) {
+    // DIRECT COMPARSION: we found the exact k,v pair. what should we do? it is application defined.
     return false;
   }
 
@@ -79,13 +84,14 @@ bool SkiplistKV::_remove(pair<key,val> item) {
   Node *q = nullptr;
   for (int i = level - 1; i >= 0; --i) {
     q = p->next[i];
-    while ((q != nullptr) && (q->item < item)) {
+    while ((q != nullptr) && (q->item.second < item.second)) { // DIRECT COMPARSION: we are looking for the item per its value.
       p = q;
       q = p->next[i];
     }
     update[i] = p;
   }
-  if ((q == nullptr) || (q->item != item)) {
+  if ((q == nullptr) || (q->item.second != item.second) || (q->item.first != item.first)) {
+    // DIRECT COMPARSION: we did not found the exact k,v pair. what should we do? it is application defined.
     return false;
   }
 

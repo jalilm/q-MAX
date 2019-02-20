@@ -9,7 +9,7 @@ using std::vector;
 using std::pair;
 
 typedef unsigned long long key;
-typedef unsigned long long val;
+typedef double val;
 
 class SkiplistKV {
  private:
@@ -64,6 +64,7 @@ class SkiplistKV {
   unsigned long size() const;
   pair<key,val> getMinimalItem() const;
   vector<pair<key, val>> getItems() const;
+  bool insert(key k, val v) {return add(pair<key,val>(k,v));};
 };
 
 #endif

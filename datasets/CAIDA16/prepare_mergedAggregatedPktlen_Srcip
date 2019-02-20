@@ -1,0 +1,4 @@
+#!/bin/bash
+
+awk -f aggregate.awk ./mergedPktlen_Srcip > ./mergedAggregatedPktlen_Srcip
+
