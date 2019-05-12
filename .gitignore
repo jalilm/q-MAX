@@ -39,6 +39,7 @@ datasets/*/merged*
 
 # executable files
 src/graph*
+src/hitrate
 
 # local resources
 .nfs*
