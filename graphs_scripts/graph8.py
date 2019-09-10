@@ -34,8 +34,8 @@ for g in [0.1, 0.05, 0.01]:
 
 ax1.set_ylim(ymin=0)
 handles, labels = ax1.get_legend_handles_labels()
-ax1.legend(handles, labels, prop={'size': 16}, loc='lower center', framealpha=1.0, bbox_to_anchor=(0.5,1), ncol=2)
+ax1.legend(handles, labels, prop={'size': 14}, loc='lower center', framealpha=1.0, bbox_to_anchor=(0.5,1), ncol=2)
 fig.tight_layout()
 plt.tick_params(axis='both', which='major', labelsize=16)
-plt.show()
-#plt.savefig('graph8.png', bbox_inches='tight')
+#plt.show()
+plt.savefig('../figures/graph8.pdf', bbox_inches='tight')

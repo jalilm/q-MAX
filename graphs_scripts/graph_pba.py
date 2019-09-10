@@ -53,5 +53,5 @@ for s in sizes:
 	fig.tight_layout()
 #	plt.show()
 	plt.ylim(ymin=0, ymax=3)
-	plt.savefig('graph_pba-q='+str(sizes)+'.png', bbox_inches='tight')
+	plt.savefig('../figures/graph_pba-q='+str(sizes)+'.pdf', bbox_inches='tight')
 

@@ -43,5 +43,5 @@ plt.tick_params(axis='y', which='major', labelsize=16)
 ax.legend(prop={'size': 16}, loc='lower center', framealpha=1.0, bbox_to_anchor=(0.5,1), ncol=2)
 fig.tight_layout()
 #plt.show()
-plt.savefig('graph_lrfu.png', bbox_inches='tight')
+plt.savefig('../figures/graph_lrfu.pdf', bbox_inches='tight')
 

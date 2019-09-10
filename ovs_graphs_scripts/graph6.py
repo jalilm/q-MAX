@@ -12,16 +12,18 @@ styles = bar_cycle()
 ax.set_ylabel('OVS Throughput [Gbps]', fontsize=20)
 ax.yaxis.grid(True)
 
-df_c = pd.read_csv('../ovs_results/graph6_caida16.txt', skipinitialspace=True)
-df_univ = pd.read_csv('../ovs_results/graph6_univ1.txt', skipinitialspace=True)
-df_c18 = pd.read_csv('../ovs_results/graph6_caida18.txt', skipinitialspace=True)
+G = str(sys.argv[1])
+
+df_c = pd.read_csv('../ovs_results/graph6_'+G+'_caida16.txt', skipinitialspace=True)
+df_univ = pd.read_csv('../ovs_results/graph6_'+G+'_univ1.txt', skipinitialspace=True)
+df_c18 = pd.read_csv('../ovs_results/graph6_'+G+'_caida18.txt', skipinitialspace=True)
 
 df_org_1 = pd.concat([df_c, df_univ, df_c18])
 df_org_1 = df_org_1.replace(np.nan, 0)
 
 df_org_1['throughput'] = df_org_1['throughput'] / 1000000000
 
-sizes=map(lambda s : 10**int(s), sys.argv[1:])
+sizes=map(lambda s : 10**int(s), sys.argv[2:])
 for s in sizes:
         df_org = df_org_1[df_org_1['size'] == s]
 	del df_org['size']
@@ -50,5 +52,5 @@ for s in sizes:
 #	ax.legend(prop={'size': 16}, loc='lower center', framealpha=1.0, bbox_to_anchor=(0.5,1), ncol=2)
 	fig.tight_layout()
 #	plt.show()
-        plt.savefig('graph6-q='+str(s)+'.png', bbox_inches='tight')
+        plt.savefig('../ovs_figures/graph6-'+G+'-q='+str(sizes)+'.pdf', bbox_inches='tight')
 

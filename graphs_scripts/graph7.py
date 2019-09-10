@@ -88,7 +88,7 @@ for g in [0.1]:
         	ax1.set_ylim(ymin=0, ymax=250)
         	ax1.set_xlim(xmin=0)
         	plt.tick_params(axis='both', which='major', labelsize=16)
-		plt.savefig('graph4.5-q='+str(s)+'.png', bbox_inches='tight')
+		plt.savefig('../figures/graph4-5-q='+str(s)+'.pdf', bbox_inches='tight')
 
 	fig, ax2 = plt.subplots(1,1)
         ax2.set_prop_cycle(multichrome2)
@@ -118,5 +118,5 @@ for g in [0.1]:
 	ax2.set_ylim(ymin=0)
 	ax2.set_xlim(xmin=0)
 	plt.tick_params(axis='both', which='major', labelsize=16)
-        #plt.savefig('graph7.png', bbox_inches='tight')
+        plt.savefig('../figures/graph7.pdf', bbox_inches='tight')
 

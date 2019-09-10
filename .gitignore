@@ -43,4 +43,4 @@ src/hitrate
 
 # local resources
 .nfs*
-
+trash/*

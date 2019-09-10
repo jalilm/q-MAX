@@ -63,5 +63,5 @@ for s in sizes:
 	fig.tight_layout()
 #	plt.show()
 	plt.ylim(ymin=0, ymax=25)
-        plt.savefig('graph6-q='+str(sizes)+'.png', bbox_inches='tight')
+        plt.savefig('../figures/graph6-q='+str(sizes)+'.pdf', bbox_inches='tight')
 

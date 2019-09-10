@@ -52,9 +52,9 @@ for s in sizes:
 	fig.tight_layout()
 #	plt.show()
 	plt.ylim(ymin=0, ymax=6.5)
-	plt.savefig('graph5-q='+str(sizes)+'.png', bbox_inches='tight')
+	plt.savefig('../figures/graph5-q='+str(sizes)+'.pdf', bbox_inches='tight')
 
 figlegend=pylab.figure()
 pylab.figlegend(*ax.get_legend_handles_labels(), fontsize=20, loc = 'upper left', ncol=3)
-figlegend.savefig("legend.png", bbox_inches='tight')
+figlegend.savefig("../figures/legend.pdf", bbox_inches='tight')
 
