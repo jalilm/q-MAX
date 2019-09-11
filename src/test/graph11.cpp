@@ -159,14 +159,14 @@ int main() {
   ofstream cachestream;
   setupOutputFile("../results/lrfu_P1.raw_res", cachestream, false, true);
   streams.push_back(&cachestream);
-  getKeysFromFile("../datasets/CACHE/P1.lis", keys, CACHE_SIZE);
+  getKeysFromFile("../datasets/CACHE/P1.list", keys, CACHE_SIZE);
   sizes.push_back(CACHE_SIZE);
   datasets.push_back("cache");
   cout << "read CACHE" << endl;
   
-  list<unsigned int> qs = {100000, 1000000};
+  list<unsigned int> qs = {10000, 100000, 1000000};
   list<double> cs = {0.75};
-  for (int run = 0; run < 1; run++) {
+  for (int run = 0; run < 9; run++) {
   for (unsigned q: qs) {
   for (double c: cs) {
     vector<key*>::iterator k_it = keys.begin();
@@ -176,7 +176,7 @@ int main() {
       key* k = *k_it;
       int size = *s_it;
       string dataset = *d_it;
-//      benchmark_lrfuheap(q, c, &k, *stream, dataset, size);
+      benchmark_lrfuheap(q, c, &k, *stream, dataset, size);
       benchmark_lrfuskiplist(q, c, &k, *stream, dataset, size);
       list<double> gammas = {0.05, 0.1, 0.25, 0.5, 1, 2};
       for (double g : gammas) {

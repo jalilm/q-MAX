@@ -35,7 +35,7 @@ for c in ["Heap", "SkipList", r'$q$-MAX,$\gamma=$0.05', r'$q$-MAX,$\gamma=$0.1',
     for s in sizes:
         y.append(j[c][s])
         yerr.append(jstd[c][s])
-    ax.bar([x+w for x in [1,3,5]],y, yerr=yerr, width=0.2, alpha=1, edgecolor='k', linewidth=1, label=c, **next(styles))
+    ax.bar([x+w for x in [1,3,5]],y, yerr=yerr, error_kw=dict(ecolor='r', lw=3, capsize=7, capthick=1), width=0.2, alpha=1, edgecolor='k', linewidth=1, label=c, **next(styles))
     w+=0.2
 ax.set_xticks([1,3,5])
 ax.set_xticklabels(sizes_labels, fontsize=16)

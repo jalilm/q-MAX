@@ -43,7 +43,7 @@ for s in sizes:
 	    for t in traces:
 	        y.append(j[c][t])
 	        yerr.append(jstd[c][t])
-	    ax.bar([x+w for x in [1,3,5]],y, yerr=yerr, width=0.2, alpha=1, edgecolor='k', linewidth=1, label=c, **next(styles))
+	    ax.bar([x+w for x in [1,3,5]],y, yerr=yerr, error_kw=dict(ecolor='r', lw=3, capsize=7, capthick=1), width=0.2, alpha=1, edgecolor='k', linewidth=1, label=c, **next(styles))
 	    w+=0.2
 	ax.set_xticks([1,3,5])
 	ax.set_xticklabels([x.upper() for x in traces], fontsize=16)

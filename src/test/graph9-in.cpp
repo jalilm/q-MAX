@@ -243,7 +243,7 @@ int main() {
   vector<val*> ws;
   vector<int> sizes;
   vector<string> datasets;
-/*
+
   ofstream univ1stream;
   setupOutputFile("../results/pba_univ1.raw_res", univ1stream, false);
   streams.push_back(&univ1stream);
@@ -251,7 +251,7 @@ int main() {
   sizes.push_back(UNIV1_SIZE);
   datasets.push_back("univ1");
   cout << "read UNIV1" << endl;
-  */
+  
   ofstream caida16stream;
   setupOutputFile("../results/pba_caida.raw_res", caida16stream, false);
   streams.push_back(&caida16stream);
@@ -268,8 +268,8 @@ int main() {
   datasets.push_back("caida18");
   cout << "read CAIDA18" << endl;
   
-  list<unsigned int> qs = {1000000};
-  for (int run = 0; run < 1; run++) {
+  list<unsigned int> qs = {1000000, 10000000};
+  for (int run = 0; run < 9; run++) {
   for (unsigned q: qs) {
     vector<key*>::iterator k_it = keys.begin();
     vector<val*>::iterator w_it = ws.begin();
@@ -281,10 +281,10 @@ int main() {
       int size = *s_it;
       string dataset = *d_it;
       benchmark_pbaheap(q, &k, &w, *stream, dataset, size);
-//      benchmark_pbaskiplist(q, &k, &w, *stream, dataset, size);
+      benchmark_pbaskiplist(q, &k, &w, *stream, dataset, size);
       list<double> gammas = {0.05, 0.1, 0.25, 0.5};
       for (double g : gammas) {
-//        benchmark_pbaqmax(q, g, &k, &w, *stream, dataset, size);
+        benchmark_pbaqmax(q, g, &k, &w, *stream, dataset, size);
       }
       ++k_it;
       ++w_it;
@@ -293,7 +293,7 @@ int main() {
     }
   }
   }
-//  univ1stream.close();
+  univ1stream.close();
   caida16stream.close();
   caida18stream.close();
   return 0;

@@ -137,8 +137,8 @@ int main() {
       key* k = *k_it;
       int size = *s_it;
       string dataset = *d_it;
-      //benchmark_hhheap(chi, &k, *stream, dataset, size);
-      //benchmark_hhskiplist(chi, &k, *stream, dataset, size);
+      benchmark_hhheap(chi, &k, *stream, dataset, size);
+      benchmark_hhskiplist(chi, &k, *stream, dataset, size);
       list<double> gammas = {0.5};//{0.5, 0.25, 0.1, 0.05};
       for (double g : gammas) {
         benchmark_hhqmax(chi, g, &k, *stream, dataset, size);
