@@ -1,0 +1,3193 @@
+version: 1
+creator: callgrind-3.11.0
+pid: 36091
+cmd:  ./graph5_benchmark
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 7109480853
+desc: Trigger: Client Request
+
+positions: line
+events: Ir
+summary: 50908126908
+
+
+ob=(5) /lib/x86_64-linux-gnu/ld-2.23.so
+fl=(7) /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/../strcmp.S
+fn=(72) strcmp
+144 53
++1 53
++2 53
++1 53
++21 53
++1 53
++1 37
++1 37
++1 35
++1 35
++1 35
++1 35
++21 35
++1 35
++1 35
++1 35
++1 35
++1 35
++1 35
++15 18
++1 18
++1 18
++1 18
++1 18
++1 18
++1 18
++1 18
++1 17
++1 8
++1 8
++1 8
++2 8
++1 8
++1 8
++1 8
++1 8
++1 8
+-5 9
++1 9
++1 9
++1 9
++1 9
++1 9
++10 1
++1 1
++1 1
++2 1
++6 1
++1 1
++1 1
++1 1
++1 1
++5 1
+821 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++4 1
++1 1
++1 1
++6 1
++1 1
++1 2
++4 1
++1 1
++3 1
++1 1
++1 1
++3 1
++1 1
++1 1
++6 1
++1 1
++1 1
++1 1
++1 1
++1 1
+1071 2
++1 2
++1 2
++1 2
++1 2
++2 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++4 2
++1 2
++1 2
++6 2
++1 2
++1 4
++4 2
++1 2
++3 2
++1 2
++1 2
++3 2
++1 2
++1 2
++6 2
++1 2
++1 2
++1 2
++1 2
++1 2
+1696 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
+1946 7
++1 7
++1 7
++1 7
++1 7
++2 7
++1 7
++1 7
++1 7
++1 7
++1 7
++1 7
+2071 6
++1 6
++1 6
++1 6
++1 6
++2 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
+2200 3
++2 3
++1 3
++1 3
++1 3
+-3 15
++1 15
++1 15
++1 15
++1 24
++5 8
++6 8
++1 8
++8 8
++1 8
+-16 45
++6 45
++1 45
++8 45
++1 45
+
+fl=(3) /build/glibc-Cl5G7W/glibc-2.23/elf/../sysdeps/x86_64/dl-trampoline.h
+fn=(62) _dl_runtime_resolve_avx
+64 5
++3 5
++2 5
++2 5
++3 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++5 5
++1 5
++1 5
++1 5
++14 5
++1 5
++1 5
+cfi=(4) /build/glibc-Cl5G7W/glibc-2.23/elf/../elf/dl-runtime.c
+cfn=(64) _dl_fixup
+calls=7 -46 
+* 4914
++1 5
++5 5
++1 5
++1 5
++1 5
++13 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++1 5
++2 5
++2 5
++4 5
++3 5
+cob=(2) /lib/x86_64-linux-gnu/libc-2.23.so
+cfi=(10) /build/glibc-Cl5G7W/glibc-2.23/malloc/malloc.c
+cfn=(248) free
+calls=1 2934 
+* 304
+cob=(2)
+cfi=(17) /build/glibc-Cl5G7W/glibc-2.23/time/../sysdeps/unix/sysv/linux/x86/time.c
+cfn=(408) __time_syscall
+calls=1 30 
+* 3
+cob=(4) /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+cfi=(9) ???
+cfn=(390) operator new[](unsigned long)
+calls=1 0 
+* 799
+cob=(4)
+cfi=(9)
+cfn=(240) operator delete(void*)
+calls=1 0 
+* 1317
+cob=(2)
+cfi=(11) /build/glibc-Cl5G7W/glibc-2.23/stdlib/random.c
+cfn=(118) srand
+calls=1 +50 
+* 10537
+
+fn=(63) _dl_runtime_resolve_avx'2
+64 2
++3 2
++2 2
++2 2
++3 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++5 2
++1 2
++1 2
++1 2
++14 2
++1 2
++1 2
+cfi=(4)
+cfn=(64)
+calls=2 -46 
+* 1703
++1 2
++5 2
++1 2
++1 2
++1 2
++13 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
++2 2
++2 2
++4 2
++3 2
+cob=(4)
+cfi=(9)
+cfn=(78) operator new(unsigned long)
+calls=1 0 
+* 198
+cob=(2)
+cfi=(10)
+cfn=(248)
+calls=1 2934 
+* 100
+
+fl=(5) /build/glibc-Cl5G7W/glibc-2.23/elf/dl-lookup.c
+fn=(74) check_match
+92 56
++3 49
++12 42
++3 52
+cfi=(7)
+cfn=(72)
+calls=8 +34 
+* 246
+* 12
++5 7
+-1 7
++1 7
++2 14
++19 14
++1 56
++46 7
+-7 7
++7 35
+-45 21
+cfi=(7)
+cfn=(72)
+calls=9 +6 
+* 250
+* 21
+
+fn=(66) _dl_lookup_symbol_x
+806 77
+568 7
+806 28
+568 35
++1 7
+-1 7
++1 21
+-1 21
++1 26
+-1 26
++1 78
+-1 92
+808 7
++4 7
++4 7
+-8 7
++1 14
++7 21
++7 7
+-2 7
++2 7
+-2 7
++6 7
+-7 7
++7 14
+-7 42
++9 98
+cfn=(68) do_lookup_x
+calls=9 355 
+* 5095
++3 21
++26 14
++22 7
++1 49
++31 7
++9 35
++14 21
++3 28
++5 7
++2 56
+
+fn=(68)
+355 49
++1 7
+-1 35
++48 7
+-30 7
+-11 7
++41 7
++7 14
+-7 14
+-30 28
++37 28
+-44 14
++3 14
+-3 44
++3 44
++4 58
++4 58
++4 58
++6 87
++8 29
+-4 29
++1 29
++3 58
++1 87
++3 29
++1 58
++2 58
++8 29
+-8 29
++8 290
+-99 22
+553 176
++1 40
+cfi=(6) /build/glibc-Cl5G7W/glibc-2.23/elf/dl-misc.c
+cfn=(70) _dl_name_match_p
+calls=24 288 
+* 1752
+* 60
++3 66
++4 56
+-92 14
++50 52
++4 3
++12 14
++1 7
++1 14
+413 54
++2 18
++2 117
++13 57
+-10 130
++2 14
++1 35
+-1 7
++1 49
+-1 7
++1 21
+cfn=(74)
+calls=9 92 
+* 903
++4 21
++34 4
++94 14
+439 63
+
+fl=(6)
+fn=(70)
+288 100
++1 40
+cfi=(7)
+cfn=(72)
+calls=24 144 
+* 606
+* 20
++1 20
+-1 20
++3 20
++2 40
++4 20
+-4 40
++1 60
+cfi=(7)
+cfn=(72)
+calls=24 144 
+* 606
+* 40
++6 20
+-1 20
++1 80
+
+fl=(4)
+fn=(64)
+66 14
++5 14
+-5 7
++3 14
++3 7
+-1 14
+-3 7
++5 42
++1 7
+-1 7
++1 14
++5 14
++4 14
++4 21
++4 7
++1 35
++2 28
++7 14
+-1 7
++1 7
++10 63
+cfi=(5)
+cfn=(66)
+calls=9 806 
+* 6024
+* 7
++4 35
++10 42
++16 7
+-8 7
++8 21
++4 21
+fi=(8) /build/glibc-Cl5G7W/glibc-2.23/elf/../sysdeps/x86_64/dl-machine.h
++90 7
+fe=(4)
+-86 21
+fi=(16) /build/glibc-Cl5G7W/glibc-2.23/elf/../sysdeps/x86_64/dl-irel.h
+32 1
+cob=(2)
+cfi=(17)
+cfn=(402) time
+calls=1 +6 
+* 66
+* 1
+fe=(4)
+
+ob=(2)
+fl=(15) /build/glibc-Cl5G7W/glibc-2.23/misc/../sysdeps/unix/syscall-template.S
+fn=(266) munmap
+84 12
++1 3
+
+fl=(20) /build/glibc-Cl5G7W/glibc-2.23/malloc/morecore.c
+fn=(416) __default_morecore
+46 22
++1 22
+cfi=(21) /build/glibc-Cl5G7W/glibc-2.23/misc/sbrk.c
+cfn=(418) sbrk
+calls=22 -13 
+* 796
++1 66
++4 44
+
+fl=(21)
+fn=(418)
+34 22
++8 22
+-8 66
++8 132
++4 44
++4 102
++12 20
+-4 36
+cfi=(22) /build/glibc-Cl5G7W/glibc-2.23/misc/../sysdeps/unix/sysv/linux/x86_64/brk.c
+cfn=(420) brk
+calls=18 -27 
+* 216
+* 36
++4 90
+-12 10
+
+fl=(14) /build/glibc-Cl5G7W/glibc-2.23/misc/../sysdeps/unix/sysv/linux/wordsize-64/mmap.c
+fn=(262) mmap
+33 3
+-1 30
++1 9
++1 30
++2 21
+-3 6
+
+fl=(10)
+fn=(84) _int_malloc
+3349 637794
+-30 425196
++30 212598
+-30 850392
++30 637794
+-30 212598
++30 637794
++4 637794
++14 425196
++2 318867
++2 106289
+-1 106289
+-1 106289
++1 106289
++5 212578
++3 481405
++1 96281
+-1 96281
++1 192562
++25 232634
++2 348888
++1 348888
++2 116296
+-2 116296
++2 232592
++39 160
++1 42
++1 6
+cfn=(258) malloc_consolidate
+calls=3 4144 
+* 257318
+3819 1628438
+-2 116317
++2 116317
+-2 116317
++2 232634
+5002 116317
+3817 116317
++2 116317
+5004 116317
+3819 116317
+5004 116317
+3819 348951
+5004 232634
+3819 465268
+5002 232634
+3469 232634
++66 7430
++1 11145
++1 3715
+-1 7430
++51 18575
++7 3715
+-6 3715
++1 3715
++1 3715
++1 3715
++3 3715
+-58 331
++51 1655
++7 331
+-6 331
++1 331
++1 331
++1 331
++3 331
+3469 361089
++3 100313
+-1 100313
++1 200626
++1 200626
++3 100313
++10 401212
++34 100313
+-5 100313
++1 100313
++4 100313
++13 8092
++8 1958
++1 1268
++1 317
++3 634
+-4 56
++1 14
++3 28
++5 304
+-2 304
++2 912
++1 608
+3382 481405
+1879 96286
+3770 96286
+1879 192572
+3833 1913382
+3541 71
++22 912
++1 608
++6 304
++10 608
+-39 48
+-54 192546
++1 6
++96 108
+-43 29
++31 608
+-31 11
++62 40100
++73 40100
++1 40100
++1 40100
++1 40100
++1 40100
++5 40126
++16 65
++2 130
+-4 162
++8 16
++3 32
++2 11
++2 11
+-1 11
+-1 33
+-27 11
++27 11
+-27 11
++4 60144
++3 80128
+-3 60087
++3 80100
+-3 40050
++3 60069
+3792 20045
++3 20045
+-2 40090
++2 40090
++17 38
+3523 96267
+-1 96267
++1 192534
+1879 96267
+3526 96267
+1879 192535
+3541 2
++64 63
++3 21
+-3 21
++3 63
+3448 12
+1879 76
+3448 112
+3692 9
++2 6
++1 6
+3448 12
+3719 10
++3 10
++5 5
+-3 10
++3 5
+-3 5
++3 66
++3 10
++15 5
++1 10
+-6 5
++17 5
+-6 5
++1 5
++1 5
++1 5
++3 5
++1 3
++1 10
++2 2
++1 2
++2 2
++2 2
+-2 14
++2 6
++1 6
+-3 3
++2 3
+-2 21
++2 9
++1 9
+3448 16
+3827 57
+cfn=(260) sysmalloc
+calls=19 2268 
+* 3041
++1 38
+-28 20026
+-3 20026
++1 20026
++2 20026
+-1 20026
++1 40052
++2 20026
+-2 80104
++2 20026
++3 20026
+1879 60078
+3727 24
+
+fn=(260)
+2268 152
++20 19
++11 19
+-11 19
++11 19
++1 89
+fi=(23) /build/glibc-Cl5G7W/glibc-2.23/malloc/arena.c
+488 48
+fe=(10)
+2315 80
++65 16
++1 48
++10 16
+-9 16
++9 48
++6 64
++3 48
+2723 32
++1 16
++8 64
++5 16
+-3 16
++3 16
+-2 16
++2 48
++1 16
+-1 16
+-1 16
++4 16
+-3 32
++1 16
++8 171
+2391 112
+-90 9
++14 12
++6 6
++19 9
++15 9
++5 9
++1 13
++3 9
++1 15
++98 16
+-8 64
++8 16
++21 80
+cfi=(20)
+cfn=(416)
+calls=16 46 
+* 752
+* 16
++1 16
++3 64
++3 32
++1 32
++20 32
++26 32
++2 32
++6 16
+-6 16
++6 48
++1 80
+2321 16
+2464 16
++10 80
++8 16
+-8 16
++8 16
+2323 21
+cfi=(14)
+cfn=(262)
+calls=3 33 
+* 99
++2 6
+
+fn=(82) malloc
+2902 637794
++5 425196
++1 425196
++3 1700784
++2 637794
+cfn=(84)
+calls=212599 3349 
+* 19400575
++3 212598
+-3 212598
++3 212598
++8 850392
++2 2338563
++3 850392
+-18 1275588
+
+fn=(264) systrim.isra.2
+2759 21
++11 9
++2 3
++1 6
+-4 3
++8 9
++2 6
+-5 1
++49 24
+-37 10
+cfi=(20)
+cfn=(416)
+calls=2 46 
+* 50
+* 2
++1 8
++12 6
+cfi=(20)
+cfn=(416)
+calls=2 46 
+* 98
++2 4
++1 4
++2 4
+cfi=(20)
+cfn=(416)
+calls=2 46 
+* 50
++2 2
++2 4
++4 4
++4 4
+-1 2
++1 4
++2 4
+
+fn=(258)
+4144 34
+-22 136
++23 51
++12 17
+5002 17
+4147 17
++11 17
+-1 17
+5004 17
+-2 17
++2 85
+4160 34
++1 34
+-1 306
++1 330
++22 10002
+-1 10002
++1 136559
++4 1583
++4 1583
+-3 1583
++1 1583
++2 1583
+-4 8423
++4 8423
+-3 8423
++1 8423
++2 8423
++1 3166
++1 3166
++3 3166
++1 3166
++1 3166
+-2 3166
++12 3166
+-12 3166
++3 6332
++9 3166
+-12 6840
++1 6840
++1 6840
+-2 6840
++12 6840
+-12 6840
++3 13680
++9 6840
+-41 10007
+-3 10007
++3 20014
++1 10007
++1 20014
++2 20014
++1 7591
++2 7591
+-1 7591
++2 112874
++3 20014
++3 20012
++4 8
++19 2
++4 1
+-4 1
++1 2
++3 4
++3 4
+-3 14
++3 676
++6 136
+-42 198
++8 494
+-8 36
++8 124
+-8 54
++8 186
+
+fn=(248)
+2934 1062985
++5 425194
++1 425194
++6 425194
++5 212597
+-2 212597
++2 425194
++16 637782
++1 425188
+cfn=(250) _int_free
+calls=212595 3841 
+* 19271587
++1 1275564
+-15 9
++2 12
++2 3
++1 3
+-1 3
++1 3
++1 6
+2833 6
++1 3
++6 3
+-7 3
++7 18
++7 3
++1 9
++5 6
+cfi=(15)
+cfn=(266)
+calls=3 84 
+* 15
+2969 18
+
+fn=(250)
+3841 1913346
++13 212594
+-13 212594
++13 425188
++6 850376
++1 425188
++11 850376
++13 425188
++11 425152
++1 318864
+1886 106288
+3921 106288
+1886 212576
+3923 318864
++1 212576
++4 106288
+-4 106288
++1 106288
++9 744016
++9 425152
++2 106288
++2 637728
+4105 1700752
+3960 212612
++1 318918
++15 212612
++8 318918
++6 212612
++1 212612
++1 212612
+1886 318918
+4001 212612
++1 21
++2 21
+-1 21
++2 412
+
+ob=(4)
+fl=(9)
+fn=(78)
+0 1488172
+cob=(2)
+cfi=(10)
+cfn=(82)
+calls=212597 2902 
+0 28922607
+0 212596
+
+ob=(2)
+fl=(10)
+fn=(250)
+4005 98
++3 212612
++5 212580
++1 36210
++1 2414
++11 2414
+-1 2414
++2 4828
+-1 103876
+-1 103876
++2 207752
++7 106290
+-2 106290
++1 106290
++1 106290
++2 332
++1 332
++2 332
++1 332
++2 996
++1 332
++30 664
+-34 105958
++1 105958
++2 317874
++1 105958
++30 211948
++1 44
++3 66
+3962 531530
++8 106306
+-4 106306
++4 318918
+-7 212612
+4093 318918
++1 318918
++1 531530
+3949 425152
++68 207752
+-3 525
++61 28
+cfn=(258)
+calls=14 +69 
+* 314466
+* 14
+-21 16
++1 48
++1 32
+-80 531530
+4079 110
++2 12
+cfn=(264)
+calls=3 2759 
+* 342
+* 3
+
+fl=(19) /build/glibc-Cl5G7W/glibc-2.23/elf/../sysdeps/unix/sysv/linux/dl-vdso.c
+fn=(406) _dl_vdso_vsym
+27 2
++4 2
+-3 2
+
+fl=(12) /build/glibc-Cl5G7W/glibc-2.23/stdlib/random_r.c
+fn=(120) srandom_r
+162 16
++8 8
++2 4
++1 8
++3 4
++2 12
++3 4
+-1 4
++1 4
++5 4
++1 4
++7 4
+-7 4
+-1 4
++1 8
++7 48
++2 12
++1 4
+-10 12
++7 1392
++2 348
++1 116
+-10 348
++13 8
++1 8
+-1 8
++2 4
++1 16
++3 8
+-3 4
++3 4
+cfn=(122) random_r
+calls=4 357 
+* 104
+* 2472
+-3 1236
++3 1236
+cfn=(122)
+calls=1236 357 
+* 32096
+-3 2480
++7 4
++4 20
+
+fn=(122)
+357 854220
++5 213555
+-2 213555
++2 427110
++9 213555
++1 213555
++1 213555
++3 427110
++3 213555
+-3 213555
++2 213555
++2 213555
+-2 213555
++5 213555
+-3 213555
+-20 206667
++31 206667
+-31 206667
++34 206667
+-2 413334
+-32 6888
++32 6888
+-1 6888
++3 13776
+
+fl=(13) /build/glibc-Cl5G7W/glibc-2.23/stdlib/rand.c
+fn=(126) rand
+26 212315
++1 212315
+cfi=(11)
+cfn=(128) random
+calls=212315 288 
+* 9122697
++1 424630
+
+fl=(22)
+fn=(420)
+31 144
++8 18
+-6 36
++7 18
+
+fl=(11)
+fn=(118)
+209 8
++1 24
++1 12
+cfi=(12)
+cfn=(120)
+calls=4 -49 
+* 42080
++1 16
++1 8
+
+fn=(128)
+288 212315
++3 1273890
++2 636945
+cfi=(12)
+cfn=(122)
+calls=212315 +64 
+* 5513342
++2 849260
++2 212315
++1 424630
+
+fl=(17)
+fn=(402)
+38 1
+-1 1
++1 6
+fi=(18) /build/glibc-Cl5G7W/glibc-2.23/time/../sysdeps/generic/dl-hash.h
++10 3
++14 4
+-17 3
++3 9
++14 12
+-17 9
+fe=(17)
+-7 3
++3 2
+-3 1
++3 1
+cfi=(19)
+cfn=(406)
+calls=1 -14 
+* 6
++1 3
++1 2
+
+fn=(408)
+30 2
++1 1
+
+ob=(4)
+fl=(9)
+fn=(78)
+0 850384
+
+fn=(98) std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+0 7
+
+fn=(240)
+0 212595
+cob=(2)
+cfi=(10)
+cfn=(248)
+calls=212595 2934 
+0 24798616
+cob=(5)
+cfi=(3)
+cfn=(63)
+calls=1 64 
+0 1311
+0 212599
+
+fn=(390)
+0 212564
+cfn=(78)
+calls=106281 0 
+0 18061685
+cob=(5)
+cfi=(3)
+cfn=(63)
+calls=1 64 
+0 790
+0 106286
+0 212564
+
+ob=(1) /home/jalilm/q-MAX/src/graph5_benchmark
+fl=(1) ???
+fn=(152) HeapKV::add(std::pair<unsigned long long, double>)
+0 4349930000
+cfn=(252) minHeapComparator::operator()(std::pair<unsigned long long, double>&, std::pair<unsigned long long, double>&)
+calls=149990000 0 
+0 6599079640
+0 750142144
+cfn=(268) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::end()
+calls=96072 0 
+0 2882160
+0 480360
+cfn=(214) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::begin()
+calls=96072 0 
+0 2786088
+0 480360
+cfn=(302) void std::pop_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator>(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator)
+calls=96072 0 
+0 477847894
+0 480360
+cfn=(308) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::pop_back()
+calls=96072 0 
+0 3650736
+0 576432
+cfn=(154) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::push_back(std::pair<unsigned long long, double> const&)
+calls=96072 0 
+0 8742552
+0 384288
+cfn=(268)
+calls=96072 0 
+0 2882160
+0 480360
+cfn=(214)
+calls=96072 0 
+0 2786088
+0 480360
+cfn=(314) void std::push_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator>(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator)
+calls=96072 0 
+0 47109910
+0 480360
+cfn=(212) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::front()
+calls=96072 0 
+0 5283960
+0 576432
+cfn=(220) std::pair<unsigned long long, double>::operator=(std::pair<unsigned long long, double> const&)
+calls=96072 0 
+0 1441080
+0 252144
+cfn=(154)
+calls=10000 0 
+0 3073356
+0 159993
+cfn=(252)
+calls=9999 0 
+0 390006
+0 30051
+cfn=(220)
+calls=9 0 
+0 135
+0 13
+cfn=(212)
+calls=1 0 
+0 55
+0 6
+cfn=(220)
+calls=1 0 
+0 15
+0 60004
+cfn=(268)
+calls=1 0 
+0 30
+0 5
+cfn=(214)
+calls=1 0 
+0 29
+0 5
+cfn=(270) void std::make_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator>(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, minHeapComparator)
+calls=1 0 
+0 6116946
+0 1500010001
+
+fn=(204) void std::_Destroy<std::pair<unsigned long long, double>*, std::pair<unsigned long long, double> >(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*, std::allocator<std::pair<unsigned long long, double> >&)
+0 363
+cfn=(206) void std::_Destroy<std::pair<unsigned long long, double>*>(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*)
+calls=33 0 
+0 660
+0 99
+
+fn=(294) __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator>::_Iter_comp_val(minHeapComparator)
+0 1182864
+
+fn=(296) void std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, long, std::pair<unsigned long long, double>, __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, long, long, std::pair<unsigned long long, double>, __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator>)
+0 6744805
+cfn=(282) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator+(long) const
+calls=300553 0 
+0 10819908
+0 1803318
+cfn=(298) bool __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator>::operator()<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>&)
+calls=300553 0 
+0 19915210
+0 2132858
+cfn=(282)
+calls=104480 0 
+0 3761280
+0 417920
+cfn=(218) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator*() const
+calls=104480 0 
+0 731360
+0 208960
+cfn=(284) std::remove_reference<std::pair<unsigned long long, double>&>::type&& std::move<std::pair<unsigned long long, double>&>(std::pair<unsigned long long, double>&)
+calls=104480 0 
+0 626880
+0 626880
+cfn=(282)
+calls=104480 0 
+0 3761280
+0 417920
+cfn=(218)
+calls=104480 0 
+0 731360
+0 313440
+cfn=(288) std::pair<unsigned long long, double>::operator=(std::pair<unsigned long long, double>&&)
+calls=104480 0 
+0 3447840
+0 1636232
+cfn=(284)
+calls=197144 0 
+0 1182864
+0 1182864
+cfn=(282)
+calls=197144 0 
+0 7097184
+0 788576
+cfn=(218)
+calls=197144 0 
+0 1380008
+0 591432
+cfn=(288)
+calls=197144 0 
+0 6505752
+0 1577152
+
+fn=(298)
+0 2704977
+cfn=(218)
+calls=300553 0 
+0 2103871
+0 1803318
+cfn=(252)
+calls=300553 0 
+0 12701938
+0 601106
+
+fn=(20) std::_List_node<unsigned long>::_List_node<>()
+0 12
+
+fn=(150) double& std::forward<double&>(std::remove_reference<double&>::type&)
+0 1800000000
+
+fn=(186) std::pair<unsigned long long, double>* std::__uninitialized_move_if_noexcept_a<std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*, std::allocator<std::pair<unsigned long long, double> > >(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*, std::allocator<std::pair<unsigned long long, double> >&)
+0 330
+cfn=(188) std::move_iterator<std::pair<unsigned long long, double>*> std::__make_move_if_noexcept_iterator<std::pair<unsigned long long, double>*, std::move_iterator<std::pair<unsigned long long, double>*> >(std::pair<unsigned long long, double>*)
+calls=30 0 
+0 840
+0 120
+cfn=(188)
+calls=30 0 
+0 840
+0 210
+cfn=(192) std::pair<unsigned long long, double>* std::__uninitialized_copy_a<std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*, std::pair<unsigned long long, double> >(std::move_iterator<std::pair<unsigned long long, double>*>, std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*, std::allocator<std::pair<unsigned long long, double> >&)
+calls=30 0 
+0 4295286
+0 120
+
+fn=(200) bool std::operator==<std::pair<unsigned long long, double>*>(std::move_iterator<std::pair<unsigned long long, double>*> const&, std::move_iterator<std::pair<unsigned long long, double>*> const&)
+0 295164
+cfn=(202) std::move_iterator<std::pair<unsigned long long, double>*>::base() const
+calls=32796 0 
+0 229572
+0 131184
+cfn=(202)
+calls=32796 0 
+0 229572
+0 196776
+
+fn=(206)
+0 330
+cfn=(208) void std::_Destroy_aux<true>::__destroy<std::pair<unsigned long long, double>*>(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>*)
+calls=33 0 
+0 231
+0 99
+
+fn=(286) void std::__adjust_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, long, std::pair<unsigned long long, double>, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, long, long, std::pair<unsigned long long, double>, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>)
+0 24367988
+cfn=(282)
+calls=1196554 0 
+0 43075944
+0 7179324
+cfn=(282)
+calls=1196554 0 
+0 43075944
+0 4786216
+cfn=(300) bool __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>::operator()<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > > >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >)
+calls=1196554 0 
+0 95000280
+0 6137516
+cfn=(282)
+calls=624068 0 
+0 22466448
+0 2862430
+cfn=(282)
+calls=572486 0 
+0 20609496
+0 4786216
+cfn=(218)
+calls=1196554 0 
+0 8375878
+0 2393108
+cfn=(284)
+calls=1196554 0 
+0 7179324
+0 7179324
+cfn=(282)
+calls=1196554 0 
+0 43075944
+0 4786216
+cfn=(218)
+calls=1196554 0 
+0 8375878
+0 3589662
+cfn=(288)
+calls=1196554 0 
+0 39486282
+0 4033960
+cfn=(282)
+calls=1 0 
+0 36
+0 4
+cfn=(218)
+calls=1 0 
+0 7
+0 2
+cfn=(284)
+calls=1 0 
+0 6
+0 6
+cfn=(282)
+calls=1 0 
+0 36
+0 4
+cfn=(218)
+calls=1 0 
+0 7
+0 3
+cfn=(288)
+calls=1 0 
+0 33
+0 7
+cfn=(292) __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator> __gnu_cxx::__ops::__iter_comp_val<minHeapComparator>(__gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>)
+calls=1 0 
+0 26
+0 404284
+cfn=(292)
+calls=101071 0 
+0 2627846
+0 404288
+cfn=(284)
+calls=101072 0 
+0 606432
+0 1111792
+cfn=(296)
+calls=101072 0 
+0 48009901
+0 1010720
+
+fn=(292)
+0 1212864
+cfn=(294)
+calls=101072 0 
+0 606432
+0 808576
+
+fn=(360) void std::_Construct<std::pair<unsigned long long, double>, std::pair<unsigned long long, double> const&>(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double> const&)
+0 90000
+cfn=(178) std::pair<unsigned long long, double> const& std::forward<std::pair<unsigned long long, double> const&>(std::remove_reference<std::pair<unsigned long long, double> const&>::type&)
+calls=10000 0 
+0 60000
+0 50000
+cfn=(90) operator new(unsigned long, void*)
+calls=10000 0 
+0 70000
+0 120000
+
+fn=(508) QMaxKV::insert(unsigned long long, double)
+0 1502934924
+cfn=(510) QMaxKV::maintenance()
+calls=197 0 
+0 450317553
+0 599891321
+
+fn=(518) QMaxKV::largestQ()
+0 10
+cfn=(510)
+calls=1 0 
+0 2151873
+0 23
+
+fn=(176) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::allocate(unsigned long, void const*)
+0 279
+cfn=(166) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::max_size() const
+calls=31 0 
+0 186
+0 248
+cob=(4)
+cfi=(9)
+cfn=(78)
+calls=31 0 
+0 8389
+0 31
+0 62
+
+fn=(188)
+0 720
+cfn=(190) std::move_iterator<std::pair<unsigned long long, double>*>::move_iterator(std::pair<unsigned long long, double>*)
+calls=60 0 
+0 600
+0 360
+
+fn=(194) std::pair<unsigned long long, double>* std::uninitialized_copy<std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*>(std::move_iterator<std::pair<unsigned long long, double>*>, std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*)
+0 390
+cfn=(196) std::pair<unsigned long long, double>* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*>(std::move_iterator<std::pair<unsigned long long, double>*>, std::move_iterator<std::pair<unsigned long long, double>*>, std::pair<unsigned long long, double>*)
+calls=30 0 
+0 4294386
+0 60
+
+fn=(256) bool std::operator< <unsigned long long, double>(std::pair<unsigned long long, double> const&, std::pair<unsigned long long, double> const&)
+0 2874275162
+
+fn=(274) __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>::_Iter_comp_iter(minHeapComparator)
+0 576438
+
+fn=(346) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::begin() const
+0 15
+cfn=(344) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::__normal_iterator(std::pair<unsigned long long, double> const* const&)
+calls=1 0 
+0 11
+0 6
+
+fn=(350) std::pair<unsigned long long, double>* std::uninitialized_copy<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*>(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*)
+0 13
+cfn=(352) std::pair<unsigned long long, double>* std::__uninitialized_copy<false>::__uninit_copy<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*>(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*)
+calls=1 0 
+0 1170053
+0 2
+
+fn=(354) bool __gnu_cxx::operator!=<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > > const&, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > > const&)
+0 90009
+cfn=(356) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::base() const
+calls=10001 0 
+0 60006
+0 40004
+cfn=(356)
+calls=10001 0 
+0 60006
+0 70007
+
+fn=(378) int&& std::forward<int>(std::remove_reference<int>::type&)
+0 12
+
+fn=(112) benchmark_psheap(int, unsigned long long**, double**, int)
+0 13
+cob=(5)
+cfi=(3)
+cfn=(62)
+calls=1 64 
+0 11632
+0 5
+0 1
+cob=(2)
+cfi=(13)
+cfn=(126)
+calls=1 26 
+0 47
+0 1
+0 16
+cfn=(130) HeapKV::HeapKV(unsigned int)
+calls=1 0 
+0 126
+0 3600000004
+cfn=(146) std::pair<unsigned long long, double>::pair<unsigned long long&, double&, void>(unsigned long long&, double&)
+calls=150000000 0 
+0 4950000000
+0 1200000000
+cfn=(152)
+calls=150000000 0 
+0 13769076518
+0 300000005
+cfn=(320) HeapKV::getItems() const
+calls=1 0 
+0 1170743
+0 3
+cfn=(364) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::~vector()
+calls=1 0 
+0 215
+0 3
+cfn=(370) HeapKV::~HeapKV()
+calls=1 0 
+0 226
+0 8
+
+fn=(174) std::allocator_traits<std::allocator<std::pair<unsigned long long, double> > >::allocate(std::allocator<std::pair<unsigned long long, double> >&, unsigned long)
+0 341
+cfn=(176)
+calls=31 0 
+0 9195
+0 62
+
+fn=(184) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_get_Tp_allocator()
+0 384
+
+fn=(226) void std::_Construct<std::pair<unsigned long long, double>, std::pair<unsigned long long, double> >(std::pair<unsigned long long, double>*, std::pair<unsigned long long, double>&&)
+0 294894
+cfn=(228) std::pair<unsigned long long, double>&& std::forward<std::pair<unsigned long long, double> >(std::remove_reference<std::pair<unsigned long long, double> >::type&)
+calls=32766 0 
+0 196596
+0 163830
+cfn=(90)
+calls=32766 0 
+0 229362
+0 393192
+
+fn=(254) bool std::operator><unsigned long long, double>(std::pair<unsigned long long, double> const&, std::pair<unsigned long long, double> const&)
+0 1514971060
+cfn=(256)
+calls=151497106 0 
+0 2874275162
+0 302994212
+
+fn=(268)
+0 2497885
+cfn=(216) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::__normal_iterator(std::pair<unsigned long long, double>* const&)
+calls=192145 0 
+0 2113595
+0 1152870
+
+fn=(334) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_Vector_impl::_Vector_impl(std::allocator<std::pair<unsigned long long, double> > const&)
+0 10
+cfn=(328) std::allocator<std::pair<unsigned long long, double> >::allocator(std::allocator<std::pair<unsigned long long, double> > const&)
+calls=1 0 
+0 20
+0 9
+
+fn=(436) std::__cxx11::list<double, std::allocator<double> >::list(std::initializer_list<double>, std::allocator<double> const&)
+0 20
+cfn=(438) std::allocator<std::_List_node<double> >::allocator<double>(std::allocator<double> const&)
+calls=1 0 
+0 17
+0 5
+cfn=(442) std::__cxx11::_List_base<double, std::allocator<double> >::_List_base(std::allocator<std::_List_node<double> > const&)
+calls=1 0 
+0 91
+0 3
+cfn=(454) std::allocator<std::_List_node<double> >::~allocator()
+calls=1 0 
+0 16
+0 3
+cfn=(458) std::initializer_list<double>::end() const
+calls=1 0 
+0 32
+0 4
+cfn=(460) std::initializer_list<double>::begin() const
+calls=1 0 
+0 7
+0 8
+cfn=(464) void std::__cxx11::list<double, std::allocator<double> >::_M_initialize_dispatch<double const*>(double const*, double const*, std::__false_type)
+calls=1 0 
+0 164473
+0 10
+
+fn=(456) __gnu_cxx::new_allocator<std::_List_node<double> >::~new_allocator()
+0 6
+
+fn=(484) std::__cxx11::_List_base<double, std::allocator<double> >::_M_get_Node_allocator()
+0 6
+
+fn=(500) std::_List_iterator<double>::operator*() const
+0 8
+
+fn=(514) QMaxKV::PartitionAroundPivot(int, int, int, double*)
+0 169326
+cfn=(516) QMaxKV::swap(int, int)
+calls=7362 0 
+0 522702
+0 272134954
+cfn=(516)
+calls=4529548 0 
+0 135238448
+0 43750344
+cfn=(516)
+calls=7362 0 
+0 418302
+0 22086
+
+fn=(156) void std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_emplace_back_aux<std::pair<unsigned long long, double> const&>(std::pair<unsigned long long, double> const&)
+0 330
+cfn=(158) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_check_len(unsigned long, char const*) const
+calls=30 0 
+0 5612
+0 180
+cfn=(172) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_allocate(unsigned long)
+calls=30 0 
+0 9724
+0 180
+cfn=(178)
+calls=30 0 
+0 180
+0 120
+cfn=(168) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::size() const
+calls=30 0 
+0 390
+0 270
+cfn=(180) _ZNSt16allocator_traitsISaISt4pairIydEEE9constructIS1_IRKS1_EEEvRS2_PT_DpOT0_
+calls=30 0 
+0 1920
+0 120
+cfn=(184)
+calls=30 0 
+0 180
+0 240
+cfn=(186)
+calls=30 0 
+0 4297746
+0 150
+cfn=(184)
+calls=30 0 
+0 180
+0 240
+cfn=(204)
+calls=30 0 
+0 1020
+0 450
+cfn=(210) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_deallocate(std::pair<unsigned long long, double>*, unsigned long)
+calls=30 0 
+0 7448
+0 540
+
+fn=(168)
+0 1963
+
+fn=(180)
+0 1044648
+cfn=(178)
+calls=116072 0 
+0 696432
+0 696432
+cfn=(182) _ZN9__gnu_cxx13new_allocatorISt4pairIydEE9constructIS2_IRKS2_EEEvPT_DpOT0_
+calls=116072 0 
+0 4642880
+0 348216
+
+fn=(202)
+0 459144
+
+fn=(214)
+0 3458616
+cfn=(216)
+calls=288218 0 
+0 3170398
+0 1729308
+
+fn=(230) std::move_iterator<std::pair<unsigned long long, double>*>::operator++()
+0 360426
+
+fn=(252)
+0 1666468166
+cfn=(254)
+calls=151497106 0 
+0 4692240434
+0 302994212
+
+fn=(280) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::base() const
+0 3458616
+
+fn=(306) void std::__pop_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>)
+0 1248936
+cfn=(218)
+calls=96072 0 
+0 672504
+0 192144
+cfn=(284)
+calls=96072 0 
+0 576432
+0 672504
+cfn=(218)
+calls=96072 0 
+0 672504
+0 192144
+cfn=(284)
+calls=96072 0 
+0 576432
+0 384288
+cfn=(218)
+calls=96072 0 
+0 672504
+0 288216
+cfn=(288)
+calls=96072 0 
+0 3170376
+0 288216
+cfn=(284)
+calls=96072 0 
+0 576432
+0 576432
+cfn=(278) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::difference_type __gnu_cxx::operator-<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > > const&, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > > const&)
+calls=96072 0 
+0 3266448
+0 1248936
+cfn=(286)
+calls=96072 0 
+0 451332022
+0 768576
+
+fn=(330) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::new_allocator(__gnu_cxx::new_allocator<std::pair<unsigned long long, double> > const&)
+0 14
+
+fn=(340) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::~new_allocator()
+0 24
+
+fn=(362) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator++()
+0 110000
+
+fn=(130)
+0 22
+cfn=(132) std::pair<unsigned long long, double>::pair<unsigned long long, unsigned long long, void>(unsigned long long&&, unsigned long long&&)
+calls=1 0 
+0 42
+0 4
+cfn=(136) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::vector()
+calls=1 0 
+0 52
+0 6
+
+fn=(134) unsigned long long&& std::forward<unsigned long long>(std::remove_reference<unsigned long long>::type&)
+0 9565518
+
+fn=(218)
+0 41847652
+
+fn=(278)
+0 2593962
+cfn=(280)
+calls=288218 0 
+0 1729308
+0 1441090
+cfn=(280)
+calls=288218 0 
+0 1729308
+0 2305744
+
+fn=(288)
+0 12754008
+cfn=(134)
+calls=1594251 0 
+0 9565506
+0 11159757
+cfn=(290) double&& std::forward<double>(std::remove_reference<double>::type&)
+calls=1594251 0 
+0 9565506
+0 9565506
+
+fn=(316) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator-(long) const
+0 1921440
+cfn=(216)
+calls=96072 0 
+0 1056792
+0 576432
+
+fn=(432) std::allocator<double>::allocator()
+0 7
+cfn=(434) __gnu_cxx::new_allocator<double>::new_allocator()
+calls=1 0 
+0 6
+0 3
+
+fn=(488) std::_List_node<double>::_List_node<double const&>(double const&)
+0 12
+cfn=(468) double const& std::forward<double const&>(std::remove_reference<double const&>::type&)
+calls=1 0 
+0 6
+0 6
+
+fn=(496) std::__cxx11::list<double, std::allocator<double> >::begin()
+0 13
+cfn=(472) std::_List_iterator<double>::_List_iterator(std::__detail::_List_node_base*)
+calls=1 0 
+0 10
+0 6
+
+fn=(512) QMaxKV::findKthLargestAndPivot()
+0 112014
+cfn=(514)
+calls=7362 0 
+0 452256162
+0 97884
+
+fn=(520) QMaxKV::~QMaxKV()
+0 8
+cob=(5)
+cfi=(3)
+cfn=(62)
+calls=1 64 
+0 1469
+0 5
+0 4
+cob=(2)
+cfi=(10)
+cfn=(248)
+calls=1 2934 
+0 179
+0 1
+0 3
+
+fn=(142) std::allocator<std::pair<unsigned long long, double> >::allocator()
+0 14
+cfn=(144) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::new_allocator()
+calls=2 0 
+0 12
+0 6
+
+fn=(160) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::max_size() const
+0 420
+cfn=(162) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_get_Tp_allocator() const
+calls=60 0 
+0 360
+0 120
+cfn=(164) std::allocator_traits<std::allocator<std::pair<unsigned long long, double> > >::max_size(std::allocator<std::pair<unsigned long long, double> > const&)
+calls=60 0 
+0 900
+0 120
+
+fn=(270)
+0 9
+cfn=(272) __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator> __gnu_cxx::__ops::__iter_comp_iter<minHeapComparator>(minHeapComparator)
+calls=1 0 
+0 26
+0 8
+cfn=(276) void std::__make_heap<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__ops::_Iter_comp_iter<minHeapComparator>)
+calls=1 0 
+0 6116898
+0 5
+
+fn=(276)
+0 13
+cfn=(278)
+calls=1 0 
+0 34
+0 9
+cfn=(278)
+calls=1 0 
+0 34
+0 13
+cfn=(282)
+calls=1 0 
+0 36
+0 24995
+cfn=(282)
+calls=4999 0 
+0 179964
+0 20000
+cfn=(218)
+calls=5000 0 
+0 35000
+0 10000
+cfn=(284)
+calls=5000 0 
+0 30000
+0 35000
+cfn=(284)
+calls=5000 0 
+0 30000
+0 60000
+cfn=(286)
+calls=5000 0 
+0 5666796
+0 25004
+
+fn=(326) std::allocator_traits<std::allocator<std::pair<unsigned long long, double> > >::select_on_container_copy_construction(std::allocator<std::pair<unsigned long long, double> > const&)
+0 10
+cfn=(328)
+calls=1 0 
+0 20
+0 3
+
+fn=(412) SkiplistKV::_insert(std::pair<unsigned long long, double>)
+0 68901472
+cfn=(414) SkiplistKV::random_level()
+calls=106281 0 
+0 13050719
+0 531851
+cfn=(380) SkiplistKV::create_node_from_int(int, std::pair<unsigned long long, double>)
+calls=12 0 
+0 5392
+0 956421
+cfn=(380)
+calls=106269 0 
+0 40328865
+0 8388699
+
+fn=(144)
+0 12
+
+fn=(170) unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+0 392
+
+fn=(192)
+0 390
+cfn=(194)
+calls=30 0 
+0 4294836
+0 60
+
+fn=(196)
+0 420
+cfn=(198) bool std::operator!=<std::pair<unsigned long long, double>*>(std::move_iterator<std::pair<unsigned long long, double>*> const&, std::move_iterator<std::pair<unsigned long long, double>*> const&)
+calls=30 0 
+0 1380
+0 163830
+cfn=(198)
+calls=32766 0 
+0 1507236
+0 163890
+cfn=(222) std::move_iterator<std::pair<unsigned long long, double>*>::operator*() const
+calls=32766 0 
+0 229362
+0 131064
+cfn=(224) std::pair<unsigned long long, double>* std::__addressof<std::pair<unsigned long long, double> >(std::pair<unsigned long long, double>&)
+calls=32766 0 
+0 196596
+0 98298
+cfn=(226)
+calls=32766 0 
+0 1277874
+0 98298
+cfn=(230)
+calls=32766 0 
+0 360426
+0 65712
+
+fn=(232) std::allocator_traits<std::allocator<std::pair<unsigned long long, double> > >::deallocate(std::allocator<std::pair<unsigned long long, double> >&, std::pair<unsigned long long, double>*, unsigned long)
+0 372
+cfn=(234) __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::deallocate(std::pair<unsigned long long, double>*, unsigned long)
+calls=31 0 
+0 6997
+0 93
+
+fn=(324) __gnu_cxx::__alloc_traits<std::allocator<std::pair<unsigned long long, double> > >::_S_select_on_copy(std::allocator<std::pair<unsigned long long, double> > const&)
+0 13
+cfn=(326)
+calls=1 0 
+0 33
+0 6
+
+fn=(342) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::end() const
+0 15
+cfn=(344)
+calls=1 0 
+0 11
+0 6
+
+fn=(426) SkiplistKV::Node::~Node()
+0 850256
+cob=(4)
+cfi=(9)
+cfn=(240)
+calls=106282 0 
+0 14378638
+0 106282
+0 318846
+
+fn=(440) __gnu_cxx::new_allocator<std::_List_node<double> >::new_allocator()
+0 6
+
+fn=(444) std::__cxx11::_List_base<double, std::allocator<double> >::_List_impl::_List_impl(std::allocator<std::_List_node<double> > const&)
+0 10
+cfn=(446) std::allocator<std::_List_node<double> >::allocator(std::allocator<std::_List_node<double> > const&)
+calls=1 0 
+0 20
+0 3
+cfn=(20)
+calls=1 0 
+0 12
+0 3
+
+fn=(448) __gnu_cxx::new_allocator<std::_List_node<double> >::new_allocator(__gnu_cxx::new_allocator<std::_List_node<double> > const&)
+0 7
+
+fn=(450) std::__cxx11::_List_base<double, std::allocator<double> >::_M_init()
+0 14
+cfn=(452) std::__cxx11::_List_base<double, std::allocator<double> >::_M_set_size(unsigned long)
+calls=1 0 
+0 10
+0 3
+
+fn=(468)
+0 30
+
+fn=(494) __gnu_cxx::new_allocator<double>::~new_allocator()
+0 6
+
+fn=(504) QMaxKV::QMaxKV(int, float)
+0 30
+cob=(2)
+cfi=(10)
+cfn=(82)
+calls=1 2902 
+0 257136
+0 1
+0 9
+cob=(2)
+cfi=(10)
+cfn=(82)
+calls=1 2902 
+0 325
+0 1
+0 35
+
+fn=(90)
+0 1111873
+
+fn=(198)
+0 327960
+cfn=(200)
+calls=32796 0 
+0 1082268
+0 98388
+
+fn=(228)
+0 196596
+
+fn=(234)
+0 279
+cob=(4)
+cfi=(9)
+cfn=(240)
+calls=30 0 
+0 4402
+cob=(5)
+cfi=(3)
+cfn=(62)
+calls=1 64 
+0 2188
+0 35
+0 93
+
+fn=(312) void __gnu_cxx::new_allocator<std::pair<unsigned long long, double> >::destroy<std::pair<unsigned long long, double> >(std::pair<unsigned long long, double>*)
+0 672504
+
+fn=(314)
+0 1345008
+cfn=(316)
+calls=96072 0 
+0 3554664
+0 384288
+cfn=(218)
+calls=96072 0 
+0 672504
+0 192144
+cfn=(284)
+calls=96072 0 
+0 576432
+0 672504
+cfn=(318) __gnu_cxx::__ops::_Iter_comp_val<minHeapComparator> __gnu_cxx::__ops::__iter_comp_val<minHeapComparator>(minHeapComparator)
+calls=96072 0 
+0 2497872
+0 384288
+cfn=(284)
+calls=96072 0 
+0 576432
+0 576432
+cfn=(278)
+calls=96072 0 
+0 3266448
+0 1056792
+cfn=(296)
+calls=96072 0 
+0 30393382
+0 960720
+
+fn=(344)
+0 22
+
+fn=(410) SkiplistKV::add(std::pair<unsigned long long, double>)
+0 3299970000
+cfn=(422) SkiplistKV::getMinimalItem() const
+calls=149990000 0 
+0 4349710000
+0 1500477686
+cfn=(412)
+calls=96281 0 
+0 119061705
+0 770248
+cfn=(424) SkiplistKV::_remove(std::pair<unsigned long long, double>)
+calls=96281 0 
+0 92663803
+0 176281
+cfn=(412)
+calls=10000 0 
+0 13101714
+0 750000000
+
+fn=(438)
+0 8
+cfn=(440)
+calls=1 0 
+0 6
+0 3
+
+fn=(454)
+0 7
+cfn=(456)
+calls=2 0 
+0 6
+0 3
+
+fn=(458)
+0 8
+cfn=(460)
+calls=1 0 
+0 7
+0 4
+cfn=(462) std::initializer_list<double>::size() const
+calls=1 0 
+0 7
+0 6
+
+fn=(466) void std::__cxx11::list<double, std::allocator<double> >::emplace_back<double const&>(double const&)
+0 9
+cfn=(468)
+calls=1 0 
+0 6
+0 4
+cfn=(470) std::__cxx11::list<double, std::allocator<double> >::end()
+calls=1 0 
+0 28
+0 6
+cfn=(474) void std::__cxx11::list<double, std::allocator<double> >::_M_insert<double const&>(std::_List_iterator<double>, double const&)
+calls=1 0 
+0 164393
+0 5
+
+fn=(140) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_Vector_impl::_Vector_impl()
+0 14
+cfn=(142)
+calls=2 0 
+0 32
+0 18
+
+fn=(148) unsigned long long& std::forward<unsigned long long&>(std::remove_reference<unsigned long long&>::type&)
+0 1800000000
+
+fn=(158)
+0 390
+cfn=(160)
+calls=30 0 
+0 960
+0 120
+cfn=(168)
+calls=30 0 
+0 390
+0 300
+cfn=(168)
+calls=30 0 
+0 390
+0 120
+cfn=(168)
+calls=30 0 
+0 390
+0 180
+cfn=(170)
+calls=30 0 
+0 392
+0 180
+cfn=(168)
+calls=30 0 
+0 390
+0 150
+cfn=(160)
+calls=30 0 
+0 960
+0 300
+
+fn=(172)
+0 372
+cfn=(174)
+calls=31 0 
+0 9598
+0 93
+
+fn=(348) std::pair<unsigned long long, double>* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*, std::pair<unsigned long long, double> >(__gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >, std::pair<unsigned long long, double>*, std::allocator<std::pair<unsigned long long, double> >&)
+0 13
+cfn=(350)
+calls=1 0 
+0 1170068
+0 2
+
+fn=(414)
+0 637686
+cob=(2)
+cfi=(13)
+cfn=(126)
+calls=106281 26 
+0 4991804
+0 106281
+0 106031
+cob=(2)
+cfi=(13)
+cfn=(126)
+calls=106031 26 
+0 4980012
+0 106031
+0 2122874
+
+fn=(476) std::_List_node<double>* std::__cxx11::list<double, std::allocator<double> >::_M_create_node<double const&>(double const&)
+0 9
+cfn=(478) std::__cxx11::_List_base<double, std::allocator<double> >::_M_get_node()
+calls=1 0 
+0 164236
+0 4
+cfn=(468)
+calls=1 0 
+0 6
+0 4
+cfn=(484)
+calls=1 0 
+0 6
+0 6
+cfn=(486) _ZN9__gnu_cxx13new_allocatorISt10_List_nodeIdEE9constructIS2_IRKdEEEvPT_DpOT0_
+calls=1 0 
+0 62
+0 6
+
+fn=(486)
+0 10
+cfn=(468)
+calls=1 0 
+0 6
+0 5
+cfn=(90)
+calls=1 0 
+0 7
+0 5
+cfn=(488)
+calls=1 0 
+0 24
+0 5
+
+fn=(516)
+0 136179452
+
+fn=(132)
+0 9
+cfn=(134)
+calls=1 0 
+0 6
+0 6
+cfn=(134)
+calls=1 0 
+0 6
+0 15
+
+fn=(154)
+0 2089086
+cfn=(180)
+calls=116042 0 
+0 7426688
+0 696402
+cfn=(156)
+calls=30 0 
+0 4327220
+0 348216
+
+fn=(290)
+0 9565506
+
+fn=(382) SkiplistKV::Node::Node(int)
+0 956538
+cfn=(384) std::pair<unsigned long long, double>::pair()
+calls=106282 0 
+0 1169102
+0 425128
+cob=(4)
+cfi=(9)
+cfn=(390)
+calls=106281 0 
+0 18593090
+cob=(5)
+cfi=(3)
+cfn=(62)
+calls=1 64 
+0 1678
+0 106286
+0 637692
+
+fn=(452)
+0 10
+
+fn=(472)
+0 30
+
+fn=(474)
+0 9
+cfn=(468)
+calls=1 0 
+0 6
+0 5
+cfn=(476)
+calls=1 0 
+0 164339
+0 6
+cob=(4)
+cfi=(9)
+cfn=(98)
+calls=1 0 
+0 7
+0 1
+0 4
+cfn=(490) std::__cxx11::_List_base<double, std::allocator<double> >::_M_inc_size(unsigned long)
+calls=1 0 
+0 13
+0 3
+
+fn=(164)
+0 420
+cfn=(166)
+calls=60 0 
+0 360
+0 120
+
+fn=(216)
+0 66817410
+
+fn=(222)
+0 229362
+
+fn=(310) void std::allocator_traits<std::allocator<std::pair<unsigned long long, double> > >::destroy<std::pair<unsigned long long, double> >(std::allocator<std::pair<unsigned long long, double> >&, std::pair<unsigned long long, double>*)
+0 960720
+cfn=(312)
+calls=96072 0 
+0 672504
+0 288216
+
+fn=(328)
+0 20
+cfn=(330)
+calls=2 0 
+0 14
+0 6
+
+fn=(338) std::allocator<std::pair<unsigned long long, double> >::~allocator()
+0 28
+cfn=(340)
+calls=4 0 
+0 24
+0 12
+
+fn=(364)
+0 21
+cfn=(184)
+calls=3 0 
+0 18
+0 24
+cfn=(204)
+calls=3 0 
+0 102
+0 9
+cfn=(366) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::~_Vector_base()
+calls=3 0 
+0 716
+0 9
+
+fn=(368) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_Vector_impl::~_Vector_impl()
+0 21
+cfn=(338)
+calls=3 0 
+0 48
+0 9
+
+fn=(370)
+0 8
+cfn=(364)
+calls=1 0 
+0 215
+0 3
+
+fn=(460)
+0 14
+
+fn=(470)
+0 24
+cfn=(472)
+calls=2 0 
+0 20
+0 12
+
+fn=(478)
+0 9
+cfn=(480) __gnu_cxx::new_allocator<std::_List_node<double> >::allocate(unsigned long, void const*)
+calls=1 0 
+0 164225
+0 2
+
+fn=(510)
+0 1386
+cfn=(512)
+calls=198 0 
+0 452466060
+0 1980
+
+fn=(526) std::_List_iterator<double>::operator++()
+0 11
+
+fn=(138) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_Vector_base()
+0 14
+cfn=(140)
+calls=2 0 
+0 64
+0 6
+
+fn=(282)
+0 104459625
+cfn=(216)
+calls=5497875 0 
+0 60476625
+0 32987250
+
+fn=(318)
+0 1152864
+cfn=(294)
+calls=96072 0 
+0 576432
+0 768576
+
+fn=(322) std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::vector(std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > const&)
+0 14
+cfn=(162)
+calls=1 0 
+0 6
+0 5
+cfn=(324)
+calls=1 0 
+0 52
+0 3
+cfn=(168)
+calls=1 0 
+0 13
+0 6
+cfn=(332) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_Vector_base(unsigned long, std::allocator<std::pair<unsigned long long, double> > const&)
+calls=1 0 
+0 427
+0 3
+cfn=(338)
+calls=1 0 
+0 16
+0 3
+cfn=(184)
+calls=1 0 
+0 6
+0 6
+cfn=(342)
+calls=1 0 
+0 32
+0 4
+cfn=(346)
+calls=1 0 
+0 32
+0 5
+cfn=(348)
+calls=1 0 
+0 1170083
+0 13
+
+fn=(422)
+0 4349710000
+
+fn=(446)
+0 10
+cfn=(448)
+calls=1 0 
+0 7
+0 3
+
+fn=(162)
+0 366
+
+fn=(182)
+0 1160720
+cfn=(178)
+calls=116072 0 
+0 696432
+0 580360
+cfn=(90)
+calls=116072 0 
+0 812504
+0 1392864
+
+fn=(284)
+0 12537666
+
+fn=(320)
+0 11
+cfn=(322)
+calls=1 0 
+0 1170729
+0 3
+
+fn=(352)
+0 14
+cfn=(354)
+calls=1 0 
+0 32
+0 50000
+cfn=(354)
+calls=10000 0 
+0 320000
+0 50002
+cfn=(358) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double> const*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator*() const
+calls=10000 0 
+0 70000
+0 40000
+cfn=(224)
+calls=10000 0 
+0 60000
+0 30000
+cfn=(360)
+calls=10000 0 
+0 390000
+0 30000
+cfn=(362)
+calls=10000 0 
+0 110000
+0 20005
+
+fn=(356)
+0 120012
+
+fn=(358)
+0 70000
+
+fn=(372) benchmark_psskiplist(int, unsigned long long**, double**, int)
+0 13
+cob=(2)
+cfi=(11)
+cfn=(118)
+calls=1 209 
+0 10537
+0 1
+0 1
+cob=(2)
+cfi=(13)
+cfn=(126)
+calls=1 26 
+0 47
+0 1
+0 17
+cfn=(374) SkiplistKV::SkiplistKV(int, bool, unsigned int)
+calls=1 0 
+0 14347
+0 3600000004
+cfn=(146)
+calls=150000000 0 
+0 4950000000
+0 1200000000
+cfn=(410)
+calls=150000000 0 
+0 10125931437
+0 300000005
+cfn=(428) SkiplistKV::getItems() const
+calls=1 0 
+0 3201784
+0 3
+cfn=(364)
+calls=1 0 
+0 469
+0 3
+cfn=(430) SkiplistKV::~SkiplistKV()
+calls=1 0 
+0 2978210
+0 8
+
+fn=(376) std::pair<unsigned long long, double>::pair<int, int, void>(int&&, int&&)
+0 9
+cfn=(378)
+calls=1 0 
+0 6
+0 7
+cfn=(378)
+calls=1 0 
+0 6
+0 8
+
+fn=(482) __gnu_cxx::new_allocator<std::_List_node<double> >::max_size() const
+0 6
+
+fn=(490)
+0 13
+
+fn=(210)
+0 450
+cfn=(232)
+calls=31 0 
+0 7462
+0 99
+
+fn=(304) __gnu_cxx::__normal_iterator<std::pair<unsigned long long, double>*, std::vector<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > > >::operator--()
+0 1056792
+
+fn=(366)
+0 57
+cfn=(210)
+calls=3 0 
+0 563
+0 9
+cfn=(368)
+calls=3 0 
+0 78
+0 9
+
+fn=(428)
+0 12
+cfn=(136)
+calls=1 0 
+0 52
+0 80007
+cfn=(154)
+calls=10000 0 
+0 3071704
+0 50009
+
+fn=(434)
+0 6
+
+fn=(442)
+0 10
+cfn=(444)
+calls=1 0 
+0 48
+0 3
+cfn=(450)
+calls=1 0 
+0 27
+0 3
+
+fn=(464)
+0 17
+cfn=(466)
+calls=1 0 
+0 164451
+0 5
+
+fn=(136)
+0 14
+cfn=(138)
+calls=2 0 
+0 84
+0 6
+
+fn=(212)
+0 960730
+cfn=(214)
+calls=96073 0 
+0 2786117
+0 384292
+cfn=(218)
+calls=96073 0 
+0 672511
+0 480365
+
+fn=(220)
+0 3035460
+
+fn=(224)
+0 256596
+
+fn=(272)
+0 1152876
+cfn=(274)
+calls=96073 0 
+0 576438
+0 768584
+
+fn=(462)
+0 7
+
+fn=(480)
+0 9
+cfn=(482)
+calls=1 0 
+0 6
+0 11
+cob=(4)
+cfi=(9)
+cfn=(78)
+calls=1 0 
+0 164196
+0 1
+0 2
+
+fn=(492) std::allocator<double>::~allocator()
+0 7
+cfn=(494)
+calls=1 0 
+0 6
+0 3
+
+fn=(498) std::_List_iterator<double>::operator!=(std::_List_iterator<double> const&) const
+0 24
+
+fn=(0) main
+0 21
+cfn=(112)
+calls=1 0 
+0 23820259566
+0 6
+cfn=(372)
+calls=1 0 
+0 20182136887
+0 5
+cfn=(432)
+calls=1 0 
+0 16
+0 11
+cfn=(436)
+calls=1 0 
+0 164689
+0 3
+cfn=(492)
+calls=1 0 
+0 16
+0 5
+cfn=(496)
+calls=1 0 
+0 29
+0 4
+cfn=(470)
+calls=1 0 
+0 28
+0 6
+cfn=(498)
+calls=1 0 
+0 12
+0 5
+cfn=(498)
+calls=1 0 
+0 12
+0 7
+cfn=(500)
+calls=1 0 
+0 8
+0 11
+cfn=(502) benchmark_psqmax(int, double, unsigned long long**, double**, int)
+calls=1 0 
+0 6905565546
+0 3
+cfn=(526)
+calls=1 0 
+0 11
+0 1
+
+fn=(146)
+0 2700000000
+cfn=(148)
+calls=300000000 0 
+0 1800000000
+0 1800000000
+cfn=(150)
+calls=300000000 0 
+0 1800000000
+0 1800000000
+
+fn=(166)
+0 546
+
+fn=(178)
+0 1453044
+
+fn=(208)
+0 231
+
+fn=(300)
+0 11965540
+cfn=(218)
+calls=1196554 0 
+0 8375878
+0 4786216
+cfn=(218)
+calls=1196554 0 
+0 8375878
+0 7179324
+cfn=(252)
+calls=1196554 0 
+0 49531228
+0 4786216
+
+fn=(302)
+0 1152864
+cfn=(278)
+calls=96072 0 
+0 3266448
+0 672504
+cfn=(304)
+calls=96072 0 
+0 1056792
+0 288216
+cfn=(272)
+calls=96072 0 
+0 2497872
+0 864648
+cfn=(306)
+calls=96072 0 
+0 467376046
+0 672504
+
+fn=(308)
+0 1441080
+cfn=(310)
+calls=96072 0 
+0 1921440
+0 288216
+
+fn=(332)
+0 12
+cfn=(334)
+calls=1 0 
+0 39
+0 5
+cfn=(336) std::_Vector_base<std::pair<unsigned long long, double>, std::allocator<std::pair<unsigned long long, double> > >::_M_create_storage(unsigned long)
+calls=1 0 
+0 366
+0 5
+
+fn=(374)
+0 26
+cfn=(376)
+calls=1 0 
+0 36
+0 8
+cfn=(380)
+calls=1 0 
+0 2366
+0 202
+cob=(5)
+cfi=(3)
+cfn=(62)
+calls=1 64 
+0 1157
+0 5
+0 2
+cob=(2)
+cfi=(11)
+cfn=(118)
+calls=1 209 
+0 10537
+0 1
+0 7
+
+fn=(430)
+0 110021
+cfn=(426)
+calls=10001 0 
+0 1788076
+0 20002
+cob=(4)
+cfi=(9)
+cfn=(240)
+calls=10001 0 
+0 1020102
+0 10001
+0 30008
+
+fn=(190)
+0 600
+
+fn=(336)
+0 10
+cfn=(172)
+calls=1 0 
+0 339
+0 17
+
+fn=(380)
+0 1487948
+cob=(4)
+cfi=(9)
+cfn=(78)
+calls=106282 0 
+0 13239291
+0 106282
+0 531410
+cfn=(382)
+calls=106282 0 
+0 21889514
+0 743974
+cfn=(220)
+calls=106282 0 
+0 1594230
+0 743974
+
+fn=(384)
+0 1169102
+
+fn=(424)
+0 67436699
+cfn=(426)
+calls=96281 0 
+0 13865946
+0 192562
+cob=(4)
+cfi=(9)
+cfn=(240)
+calls=96281 0 
+0 9820662
+0 96281
+0 1251653
+
+fn=(502)
+0 14
+cob=(2)
+cfi=(11)
+cfn=(118)
+calls=1 209 
+0 10537
+0 1
+0 1
+cob=(2)
+cfi=(13)
+cfn=(126)
+calls=1 26 
+0 47
+0 1
+0 17
+cfn=(504)
+calls=1 0 
+0 257537
+0 4050000004
+cfn=(508)
+calls=150000000 0 
+0 2553143798
+0 300000003
+cfn=(518)
+calls=1 0 
+0 2151906
+0 3
+cfn=(520)
+calls=1 0 
+0 1669
+0 8
+
+totals: 50908126908

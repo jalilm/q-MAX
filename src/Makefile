@@ -50,8 +50,14 @@ graph34: test/graph34.cpp test/Utils.hpp $(REG_OBJ)
 	
 graph5: test/graph5.cpp test/Utils.hpp $(KV_OBJS)
 	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(KV_OBJ) test/$@.cpp -o $@
+
+graph5_benchmark: test/graph5_benchmark.cpp test/Utils.hpp $(KV_OBJS)
+	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(KV_OBJ) test/$@.cpp -o $@
  
 graph6: test/graph6.cpp test/Utils.hpp  $(KV_OBJS) xxhash.o
+	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(KV_OBJ) xxhash.o test/$@.cpp -o $@
+
+graph6_benchmark: test/graph6_benchmark.cpp test/Utils.hpp $(KV_OBJS) xxhash.o
 	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(KV_OBJ) xxhash.o test/$@.cpp -o $@
  
 graph7: test/graph7.cpp test/Utils.hpp $(REG_OBJ) SlidingQmax.o
@@ -61,6 +67,9 @@ graph8: test/graph8.cpp test/Utils.hpp $(REG_OBJ) SlidingQmax.o
 	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(REG_OBJ) SlidingQmax.o test/$@.cpp -o $@
  
 graph9-in: test/graph9-in.cpp test/Utils.hpp $(PBA_OBJ)
+	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(PBA_OBJ) test/$@.cpp -o $@
+
+graphpba_benchmark: test/graphpba_benchmark.cpp test/Utils.hpp $(PBA_OBJ)
 	$(CC) $(DEBUG_FLAGS) $(FLAGS) $(PBA_OBJ) test/$@.cpp -o $@
 
 graph10: test/graph10.cpp test/Utils.hpp $(KV_OBJS)
